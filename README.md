@@ -16,4 +16,4 @@ Write with Markdown and generate a resume.
 ## Others
 
 - Host by Vercel
-- Inspired by「[Oh, CV!](https://ohcv.zxh.io)」by [Renovamen](https://github.com/Renovamen)
+- Inspired by「[Oh, CV!](https://ohcv.zxh.io)」, [Renovamen](https://github.com/Renovamen)
