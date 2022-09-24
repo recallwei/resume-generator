@@ -1,5 +1,9 @@
 @import "./base.css";
 
+body {
+  margin: 0;
+}
+
 #app {
   min-height: 100vh;
   background-color: #fff;
