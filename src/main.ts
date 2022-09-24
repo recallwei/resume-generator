@@ -8,6 +8,8 @@ const app = createApp(App);
 
 app.use(router);
 
+app.config.globalProperties.appName = "Resume Generator";
+
 app.config.errorHandler = (error) => {
   console.log(error);
 };
