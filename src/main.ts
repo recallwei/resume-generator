@@ -10,6 +10,7 @@ const app = createApp(App);
 app.use(router);
 app.use(i18n);
 
+// TODO - Move to environment variables
 app.config.globalProperties.version = "1.0.0";
 
 app.config.errorHandler = (error) => {
