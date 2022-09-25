@@ -3,8 +3,6 @@ import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { GitHubButton } from "@components";
 
-import favicon from "@assets/img/resume-generator.png";
-
 const { t } = useI18n();
 const router = useRouter();
 
