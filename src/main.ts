@@ -10,7 +10,7 @@ const app = createApp(App);
 app.use(router);
 app.use(i18n);
 
-app.config.globalProperties.appName = "Resume Generator";
+app.config.globalProperties.version = "1.0.0";
 
 app.config.errorHandler = (error) => {
   console.log(error);

@@ -8,6 +8,7 @@
       "@views/*": ["./src/views/*"],
       "@views": ["./src/views"],
       "@components/*": ["./src/components/*"],
+      "@components": ["./src/components"],
       "@assets/*": ["./src/assets/*"]
     }
   },

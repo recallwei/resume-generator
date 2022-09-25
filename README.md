@@ -12,6 +12,7 @@ Write with Markdown and generate a resume.
 ## Library
 
 - Pinia
+- vue-i18n
 
 ## Others
 
