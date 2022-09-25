@@ -3,7 +3,7 @@ import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { GitHubButton } from "@components";
 
-import github from "@assets/icon/github.png";
+import favicon from "@assets/img/resume-generator.png";
 
 const { t } = useI18n();
 const router = useRouter();
@@ -47,7 +47,7 @@ function onClickStartBtn() {
               class="flex items-center justify-center gap-1 whitespace-nowrap"
             >
               <img
-                :src="github"
+                :src="favicon"
                 width="16"
                 height="16"
                 className="flex-shrink-0"
