@@ -44,12 +44,7 @@ function onClickStartBtn() {
             <span
               class="flex items-center justify-center gap-1 whitespace-nowrap"
             >
-              <img
-                :src="favicon"
-                width="16"
-                height="16"
-                className="flex-shrink-0"
-              />
+              <img :src="" width="16" height="16" className="flex-shrink-0" />
               {{ t("common.start") }}
             </span>
           </button>
