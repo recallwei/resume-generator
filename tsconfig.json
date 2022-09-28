@@ -4,13 +4,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      // "@/*": ["./src/*"],
       "@views/*": ["./src/views/*"],
       "@views": ["./src/views"],
       "@components/*": ["./src/components/*"],
       "@components": ["./src/components"],
       "@assets/*": ["./src/assets/*"]
-    }
+    },
+    "types": ["element-plus/global"]
   },
 
   "references": [

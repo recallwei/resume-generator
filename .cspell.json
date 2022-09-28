@@ -1,6 +1,13 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["Pinia", "Renovamen", "tailwindcss", "rushstack", "daisyui"],
+  "words": [
+    "Pinia",
+    "Renovamen",
+    "tailwindcss",
+    "rushstack",
+    "daisyui",
+    "kazupon"
+  ],
   "flagWords": []
 }
