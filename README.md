@@ -8,6 +8,7 @@ Write with Markdown and generate a resume.
 - TypeScript
 - Vite
 - Tailwind
+- DaisyUI
 
 ## Library
 
