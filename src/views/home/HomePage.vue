@@ -5,6 +5,7 @@ import { Icon } from "@components";
 
 const { t } = useI18n();
 const router = useRouter();
+const VERSION = "1.0.0";
 
 function onClickStartBtn() {
   router.push("/resume-editor");
@@ -26,7 +27,7 @@ function onClickStartBtn() {
           <div
             class="select-none bg-gradient-to-r from-emerald-600 to-violet-300 bg-clip-text text-lg font-medium text-transparent"
           >
-            v{{ version }}
+            v{{ VERSION }}
           </div>
           <span class="text-center text-lg text-gray-600">
             {{ t("application.description.firstLine") }}

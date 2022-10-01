@@ -13,7 +13,7 @@ app.use(i18n);
 app.use(ElementPlus, { size: "small", zIndex: 3000 });
 
 // TODO - Move to environment variables
-app.config.globalProperties.version = "1.0.0";
+app.config.globalProperties.$version = "1.0.0";
 
 app.config.errorHandler = (error) => {
   console.log(error);
