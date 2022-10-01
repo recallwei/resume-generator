@@ -5,6 +5,6 @@ export type SvgPropsType = {
   onClick?: () => void;
 };
 
-import Door from "./DoorIconComponent.vue";
+import Touch from "./TouchIcon.vue";
 
-export const Icon = { Door };
+export const Icon = { Touch };

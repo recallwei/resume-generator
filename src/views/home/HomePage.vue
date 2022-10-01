@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
+import { Icon } from "@components";
+
 const { t } = useI18n();
 const router = useRouter();
 
@@ -42,7 +44,12 @@ function onClickStartBtn() {
             <span
               class="flex items-center justify-center gap-1 whitespace-nowrap"
             >
-              <img :src="" width="16" height="16" className="flex-shrink-0" />
+              <Icon.Touch
+                width="18"
+                height="18"
+                class="flex-shrink-0 fill-white"
+                @click="onClickStartBtn"
+              />
               {{ t("common.start") }}
             </span>
           </button>

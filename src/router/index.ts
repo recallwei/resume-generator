@@ -7,19 +7,19 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Home,
+      component: Home
     },
     {
       path: "/resume-editor",
       name: "resume-editor",
-      component: () => import("@views/ResumeEditorView.vue"),
+      component: () => import("@views/ResumeEditorPage.vue")
     },
     {
       path: "/test",
       name: "test",
-      component: () => import("@views/TestView.vue"),
-    },
-  ],
+      component: () => import("@views/TestPage.vue")
+    }
+  ]
 });
 
 export default router;
