@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import github from "@assets/icon/github.png";
-const repoUrl = "https://github.com/recallwei/resume-generator";
+const REPO_URL = "https://github.com/recallwei/resume-generator";
 </script>
 
 <template>
   <div class="flex cursor-pointer items-center justify-center">
     <a
-      :href="repoUrl"
+      :href="REPO_URL"
       target="_blank"
       rel="noopener noreferrer"
       class="rounded-full bg-gray-50 p-1 shadow-xl transition-colors hover:bg-gray-200 active:bg-gray-50"
