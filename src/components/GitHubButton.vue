@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import github from "@assets/icon/github.png";
+import github from "/icon/github.png";
 const REPO_URL = "https://github.com/recallwei/resume-generator";
 </script>
 
