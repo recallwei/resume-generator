@@ -1,19 +1,21 @@
 # Resume Generator
 
-Write with Markdown and generate a resume.
+Use Markdown to write and generate a resume.
 
 ## Stack
 
-- Vue
+- Vue 3
 - TypeScript
 - Vite
-- Tailwind
-- DaisyUI
 
 ## Library
 
-- Pinia
+- Tailwind
+- DaisyUI
+- vue-router
 - vue-i18n
+- Pinia
+- Element+
 
 ## Others
 
