@@ -15,5 +15,22 @@ export default defineConfig({
       "@components": path.resolve(__dirname, "src/components"),
       "@assets": path.resolve(__dirname, "src/assets")
     }
+  },
+  base: "/dist/",
+  build: {
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return id
+              .toString()
+              .split("node_modules/")[1]
+              .split("/")[0]
+              .toString();
+          }
+        }
+      }
+    }
   }
 });
