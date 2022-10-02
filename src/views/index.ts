@@ -1,5 +1,4 @@
-import Home from "./home/HomePage.vue";
-import ResumeEditorView from "./ResumeEditorPage.vue";
-import TestView from "./TestPage.vue";
+import Home from "./Home/HomePage.vue";
+import ResumeEditor from "./ResumeEditor/ResumeEditorPage.vue";
 
-export { Home, ResumeEditorView, TestView };
+export { Home, ResumeEditor };
