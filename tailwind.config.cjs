@@ -16,11 +16,11 @@ module.exports = {
           600: "#50c878", // DEFAULT
           700: "#45a463",
           800: "#39814f",
-          900: "#2e5f3c",
-        },
-      },
-    },
+          900: "#2e5f3c"
+        }
+      }
+    }
   },
   plugins: [require("daisyui")],
-  darkMode: ["class"],
+  darkMode: ["class"]
 };
