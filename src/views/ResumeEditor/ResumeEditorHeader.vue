@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import favicon from "@assets/img/resume-generator.png";
+import favicon from "/img/resume-generator.png";
 
 const router = useRouter();
 function goHome() {
