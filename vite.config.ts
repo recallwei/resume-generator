@@ -10,13 +10,12 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      // "@": fileURLToPath(new URL("./src", import.meta.url)),
+      //"@": fileURLToPath(new URL("./src", import.meta.url)),
       "@views": path.resolve(__dirname, "src/views"),
       "@components": path.resolve(__dirname, "src/components"),
       "@assets": path.resolve(__dirname, "src/assets")
     }
   },
-  base: "/dist/",
   build: {
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
