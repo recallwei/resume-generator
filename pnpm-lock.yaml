@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  "@element-plus/icons-vue": ^2.0.9
   "@rushstack/eslint-patch": ^1.2.0
   "@types/node": ^16.11.59
   "@vitejs/plugin-vue": ^3.1.0
@@ -32,6 +33,7 @@ specifiers:
   vue-tsc: ^0.40.13
 
 dependencies:
+  "@element-plus/icons-vue": 2.0.9_vue@3.2.39
   daisyui: 2.31.0_jhfe3rbur6kzimvcehnoniy6fy
   element-plus: 2.2.17_vue@3.2.39
   pinia: 2.0.22_arz4dztosvwy2ghjrlh2wdhejm
