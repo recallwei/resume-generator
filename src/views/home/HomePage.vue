@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 import { Icon, GitHubButton } from "@components";
 
-const { t } = useI18n();
 const router = useRouter();
+const { t } = useI18n();
+
 const VERSION = "1.0.0";
 
 function onClickStartBtn() {
