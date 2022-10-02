@@ -15,5 +15,9 @@ export default defineConfig({
       "@components": path.resolve(__dirname, "src/components"),
       "@assets": path.resolve(__dirname, "src/assets")
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 1500,
+    reportCompressedSize: false
   }
 });
