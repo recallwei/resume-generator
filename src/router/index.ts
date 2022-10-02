@@ -5,17 +5,17 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "Home",
+      name: "home",
       component: () => import("../views/Home/HomePage.vue")
     },
     {
       path: "/resume-editor",
-      name: "ResumeEditor",
+      name: "resume-editor",
       component: () => import("../views/ResumeEditor/ResumeEditorLayout.vue")
     },
     {
       path: "/:pathMatch(.*)*",
-      name: "NotFound",
+      name: "notfound",
       component: () => import("../views/NotFound/NotFoundPage.vue")
     }
   ]
