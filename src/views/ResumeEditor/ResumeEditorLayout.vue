@@ -13,7 +13,7 @@ import ResumeEditor from "./ResumeEditor.vue";
       <el-aside width="200px" class="border-r">
         <ResumeEditorSidebar />
       </el-aside>
-      <el-main>
+      <el-main class="p-2">
         <ResumeEditor />
       </el-main>
     </el-container>

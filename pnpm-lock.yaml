@@ -17,6 +17,7 @@ specifiers:
   eslint-plugin-vue: ^9.5.1
   husky: ^8.0.1
   lint-staged: ^13.0.3
+  monaco-editor: ^0.34.0
   npm-run-all: ^4.1.5
   pinia: ^2.0.22
   postcss: ^8.4.16
@@ -36,6 +37,7 @@ dependencies:
   "@element-plus/icons-vue": 2.0.9_vue@3.2.39
   daisyui: 2.31.0_jhfe3rbur6kzimvcehnoniy6fy
   element-plus: 2.2.17_vue@3.2.39
+  monaco-editor: 0.34.0
   pinia: 2.0.22_arz4dztosvwy2ghjrlh2wdhejm
   vue: 3.2.39
   vue-i18n: 9.2.2_vue@3.2.39
@@ -4430,6 +4432,13 @@ packages:
       {
         integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
       }
+
+  /monaco-editor/0.34.0:
+    resolution:
+      {
+        integrity: sha512-VF+S5zG8wxfinLKLrWcl4WUizMx+LeJrG4PM/M78OhcwocpV0jiyhX/pG6Q9jIOhrb/ckYi6nHnaR5OojlOZCQ==
+      }
+    dev: false
 
   /ms/2.1.2:
     resolution:

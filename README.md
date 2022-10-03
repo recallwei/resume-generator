@@ -16,6 +16,7 @@ Use Markdown to write and generate a resume.
 - vue-i18n
 - Pinia
 - Element+
+- Monaco Editor
 
 ## Others
 

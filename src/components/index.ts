@@ -1,7 +1,6 @@
 import { Icon } from "./Svg";
 import GitHubButton from "./GitHubButton.vue";
-import AppHeaderVue from "./AppHeader.vue";
-import AppLayoutVue from "./AppLayout.vue";
-import AppSidebarVue from "./AppSidebar.vue";
+import MarkdownEditor from "./MarkdownEditor.vue";
+import ResumePreview from "./ResumePreview.vue";
 
-export { Icon, GitHubButton, AppHeaderVue, AppLayoutVue, AppSidebarVue };
+export { Icon, GitHubButton, MarkdownEditor, ResumePreview };

@@ -1,3 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { MarkdownEditor, ResumePreview } from "@components";
+</script>
 
-<template><div></div></template>
+<template>
+  <div class="flex h-full">
+    <MarkdownEditor />
+    <ResumePreview />
+  </div>
+</template>
