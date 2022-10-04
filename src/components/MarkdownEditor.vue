@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import * as monaco from "monaco-editor";
+import test from "@assets/test.md?raw";
 
 onMounted(() => {
   const editorInstance = monaco.editor.create(
     document.getElementById("markdown-editor") as HTMLElement,
     {
-      value: "test.md",
+      value: test,
       language: "markdown",
       automaticLayout: true,
       scrollBeyondLastLine: false,
