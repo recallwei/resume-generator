@@ -7,6 +7,7 @@ import htmlWorker from "monaco-editor/esm/vs/language/html/html.worker?worker";
 import tsWorker from "monaco-editor/esm/vs/language/typescript/ts.worker?worker";
 import editorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import test from "@assets/test.md?raw";
+import test2 from "@assets/test2.md?raw";
 
 const editorRef = ref<HTMLElement>();
 
@@ -30,22 +31,21 @@ self.MonacoEnvironment = {
 
 onMounted(() => {
   const editorInstance = monaco.editor.create(editorRef.value as HTMLElement, {
-    value: test,
+    value: test2,
     language: "markdown",
     theme: "vs", // vs, vs-dark, hc-black
     automaticLayout: true,
     selectionHighlight: true,
     scrollBeyondLastLine: false,
     tabSize: 2,
-    fontSize: 14
+    fontSize: 13
   });
   editorInstance.onDidChangeModelContent(() => {
     const value = editorInstance.getValue();
-    console.log(value);
   });
 });
 </script>
 
 <template>
-  <div id="markdown-editor" class="h-full w-1/2" ref="editorRef" />
+  <div ref="editorRef" class="h-full" />
 </template>

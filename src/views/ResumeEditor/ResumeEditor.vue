@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { MarkdownEditor, ResumePreview } from "@components";
+import MarkdownEditor from "./MarkdownEditor.vue";
+import ResumePreview from "./ResumePreview.vue";
 import { Splitpanes, Pane } from "splitpanes";
 import "splitpanes/dist/splitpanes.css";
 </script>
 
 <template>
-  <div class="flex h-full">
-    <splitpanes class="default-theme h-full">
-      <pane min-size="30">
-        <MarkdownEditor />
-      </pane>
-      <pane min-size="30">
-        <ResumePreview />
-      </pane>
-    </splitpanes>
-  </div>
+  <splitpanes class="default-theme h-full">
+    <pane min-size="30">
+      <MarkdownEditor />
+    </pane>
+    <pane min-size="30">
+      <ResumePreview />
+    </pane>
+  </splitpanes>
 </template>

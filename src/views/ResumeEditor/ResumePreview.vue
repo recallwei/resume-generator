@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-blue-50 h-full grow"></div>
+  <div class="h-full grow bg-white"></div>
 </template>

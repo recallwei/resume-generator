@@ -10,12 +10,12 @@ import ResumeEditor from "./ResumeEditor.vue";
       <ResumeEditorHeader />
     </el-header>
     <el-container>
+      <el-main class="p-2 bg-gray-100">
+        <ResumeEditor />
+      </el-main>
       <el-aside width="200px" class="border-r">
         <ResumeEditorSidebar />
       </el-aside>
-      <el-main class="p-2">
-        <ResumeEditor />
-      </el-main>
     </el-container>
   </el-container>
 </template>
