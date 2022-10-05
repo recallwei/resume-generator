@@ -1,3 +1,5 @@
 <script setup lang="ts"></script>
 
-<template><div class="bg-red-300 h-full w-1/2"></div></template>
+<template>
+  <div id="previewer" class="bg-red-300 h-full grow"></div>
+</template>
