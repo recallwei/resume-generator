@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import ResumeEditorHeader from "./ResumeEditorHeader.vue";
-import ResumeEditorSidebar from "./ResumeEditorSidebar.vue";
-import ResumeEditor from "./ResumeEditor.vue";
+import MarkdownEditor from "./MarkdownEditor.vue";
+import ResumePreview from "./ResumePreview.vue";
+import ResumeEditorToolbar from "./ResumeEditorToolbar.vue";
+import { Splitpanes, Pane } from "splitpanes";
+import "splitpanes/dist/splitpanes.css";
 </script>
 
 <template>
@@ -9,13 +12,18 @@ import ResumeEditor from "./ResumeEditor.vue";
     <el-header height="64px" class="border-b flex items-center gap-2">
       <ResumeEditorHeader />
     </el-header>
-    <el-container>
-      <el-main class="p-2 bg-gray-100">
-        <ResumeEditor />
-      </el-main>
-      <el-aside width="200px" class="border-r">
-        <ResumeEditorSidebar />
-      </el-aside>
-    </el-container>
+    <el-main class="p-0 bg-[color:#F2F2F2]">
+      <splitpanes class="default-theme h-full">
+        <pane maxSize="65" size="55">
+          <MarkdownEditor />
+        </pane>
+        <pane minSize="20">
+          <ResumePreview />
+        </pane>
+        <pane size="12" minSize="12" maxSize="15">
+          <ResumeEditorToolbar class="bg-white" />
+        </pane>
+      </splitpanes>
+    </el-main>
   </el-container>
 </template>
