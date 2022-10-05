@@ -27,6 +27,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^16.11.59",
+    "@types/splitpanes": "^2.2.1",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",

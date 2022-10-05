@@ -4,6 +4,7 @@ specifiers:
   "@element-plus/icons-vue": ^2.0.9
   "@rushstack/eslint-patch": ^1.2.0
   "@types/node": ^16.11.59
+  "@types/splitpanes": ^2.2.1
   "@vitejs/plugin-vue": ^3.1.0
   "@vitejs/plugin-vue-jsx": ^2.0.1
   "@vue/eslint-config-prettier": ^7.0.0
@@ -48,6 +49,7 @@ dependencies:
 devDependencies:
   "@rushstack/eslint-patch": 1.2.0
   "@types/node": 16.11.59
+  "@types/splitpanes": 2.2.1
   "@vitejs/plugin-vue": 3.1.0_vite@3.1.3+vue@3.2.39
   "@vitejs/plugin-vue-jsx": 2.0.1_vite@3.1.3+vue@3.2.39
   "@vue/eslint-config-prettier": 7.0.0_lpvhfrfofky3e6gkwtrv5gvhfa
@@ -1163,6 +1165,15 @@ packages:
       }
     dev: true
 
+  /@types/splitpanes/2.2.1:
+    resolution:
+      {
+        integrity: sha512-H5BgO6UdJRzz5ddRzuGvLBiPSPEuuHXb5ET+7avLLrEx1uc7f5Ut5oLMDQsfvGtHBBAFczt1QNYuDf27wHbvDQ==
+      }
+    dependencies:
+      vue: 2.7.10
+    dev: true
+
   /@types/web-bluetooth/0.0.15:
     resolution:
       {
@@ -1453,6 +1464,17 @@ packages:
     dependencies:
       "@vue/compiler-core": 3.2.39
       "@vue/shared": 3.2.39
+
+  /@vue/compiler-sfc/2.7.10:
+    resolution:
+      {
+        integrity: sha512-55Shns6WPxlYsz4WX7q9ZJBL77sKE1ZAYNYStLs6GbhIOMrNtjMvzcob6gu3cGlfpCR4bT7NXgyJ3tly2+Hx8Q==
+      }
+    dependencies:
+      "@babel/parser": 7.19.1
+      postcss: 8.4.16
+      source-map: 0.6.1
+    dev: true
 
   /@vue/compiler-sfc/3.2.39:
     resolution:
@@ -2402,6 +2424,13 @@ packages:
       {
         integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==
       }
+
+  /csstype/3.1.1:
+    resolution:
+      {
+        integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
+      }
+    dev: true
 
   /daisyui/2.31.0_jhfe3rbur6kzimvcehnoniy6fy:
     resolution:
@@ -6117,6 +6146,16 @@ packages:
       "@volar/vue-language-core": 0.40.13
       "@volar/vue-typescript": 0.40.13
       typescript: 4.8.3
+    dev: true
+
+  /vue/2.7.10:
+    resolution:
+      {
+        integrity: sha512-HmFC70qarSHPXcKtW8U8fgIkF6JGvjEmDiVInTkKZP0gIlEPhlVlcJJLkdGIDiNkIeA2zJPQTWJUI4iWe+AVfg==
+      }
+    dependencies:
+      "@vue/compiler-sfc": 2.7.10
+      csstype: 3.1.1
     dev: true
 
   /vue/3.2.39:
