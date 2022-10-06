@@ -6,5 +6,7 @@ export type SvgPropsType = {
 };
 
 import Touch from "./TouchIcon.vue";
+import Collapse from "./CollapseIcon.vue";
+import Expand from "./ExpandIcon.vue";
 
-export const Icon = { Touch };
+export const Icon = { Touch, Collapse, Expand };

@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<SvgPropsType>(), {
     :height="props.height"
     class="fill-black"
     :class="props.class"
-    @click="props.onClick"
+    @click.prevent="props.onClick"
   >
     <g>
       <rect fill="none" height="24" width="24" />
