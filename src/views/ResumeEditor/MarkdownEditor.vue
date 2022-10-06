@@ -33,7 +33,7 @@ onMounted(() => {
   const editorInstance = monaco.editor.create(editorRef.value as HTMLElement, {
     value: test2,
     language: "markdown",
-    theme: "vs", // vs, vs-dark, hc-black
+    //theme: "vs", // vs, vs-dark, hc-black
     automaticLayout: true,
     wordWrap: "on",
     tabSize: 2,
