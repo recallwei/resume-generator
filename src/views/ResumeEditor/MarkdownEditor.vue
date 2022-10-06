@@ -35,8 +35,7 @@ onMounted(() => {
     language: "markdown",
     theme: "vs", // vs, vs-dark, hc-black
     automaticLayout: true,
-    selectionHighlight: true,
-    scrollBeyondLastLine: false,
+    wordWrap: "on",
     tabSize: 2,
     fontSize: 13
   });
