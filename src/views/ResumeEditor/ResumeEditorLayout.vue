@@ -7,7 +7,7 @@ import ResumeEditorToolbar from "./ResumeEditorToolbar.vue";
 import { Splitpanes, Pane } from "splitpanes";
 import "splitpanes/dist/splitpanes.css";
 
-const expand = ref<boolean>(false);
+const expand = ref<boolean>(true);
 </script>
 
 <template>

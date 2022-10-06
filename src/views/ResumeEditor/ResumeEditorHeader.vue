@@ -9,7 +9,7 @@ const router = useRouter();
 const { t } = useI18n();
 
 const emit = defineEmits(["toggleExpand"]);
-const expand = ref<boolean>(false);
+const expand = ref<boolean>(true);
 
 function goHome() {
   router.push("/");
