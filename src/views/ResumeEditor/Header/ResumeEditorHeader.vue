@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
+import { useRouter, RouterLink } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { Icon } from "@components";
 import { useEditorStore } from "@stores";
@@ -30,11 +30,21 @@ function toggleExpand() {
     />
     <label class="select-none">{{ t("application.name") }}</label>
   </div>
-  <div
-    class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
-    @click.prevent="toggleExpand"
-  >
-    <Icon.Expand v-if="editorStore.toolbarCollapsed" />
-    <Icon.Collapse v-else class="cursor-pointer" />
+  <div class="flex items-center gap-2">
+    <div
+      class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+      @click.prevent="toggleExpand"
+    >
+      <Icon.Expand v-if="editorStore.toolbarCollapsed" />
+      <Icon.Collapse v-else class="cursor-pointer" />
+    </div>
+    <RouterLink
+      target="_blank"
+      :to="{
+        path: 'https://github.com/recallwei/resume-generator'
+      }"
+    >
+      <Icon.GitHub class="cursor-pointer" />
+    </RouterLink>
   </div>
 </template>
