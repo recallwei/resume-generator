@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, ref, toRaw } from "vue";
 import * as monaco from "monaco-editor";
 import test from "@assets/test.md?raw";
-import test2 from "@assets/test2.md?raw";
+import { useEditorStore } from "@stores";
 
 const editorRef = ref<HTMLElement | null>(null);
 const editorInstance = ref<monaco.editor.IStandaloneCodeEditor | null>(null);
 
+const editorStore = useEditorStore();
+
 onMounted(() => {
   if (editorRef.value && !editorInstance.value) {
     editorInstance.value = monaco.editor.create(editorRef.value, {
-      value: test2,
+      value: test,
       language: "markdown",
       automaticLayout: true,
       wordWrap: "on",
@@ -18,9 +20,12 @@ onMounted(() => {
       fontSize: 13
       //theme: "vs", // vs, vs-dark, hc-black
     });
+    editorStore.changeContent(test);
     editorInstance.value.onDidChangeModelContent(() => {
-      //const value = editorInstance.value?.getValue();
-      //console.log(value);
+      if (editorInstance.value) {
+        const value = toRaw(editorInstance.value).getValue();
+        editorStore.changeContent(value);
+      }
     });
   }
 });
