@@ -19,8 +19,8 @@ onMounted(() => {
       //theme: "vs", // vs, vs-dark, hc-black
     });
     editorInstance.value.onDidChangeModelContent(() => {
-      const value = editorInstance.value?.getValue();
-      console.log(value);
+      //const value = editorInstance.value?.getValue();
+      //console.log(value);
     });
   }
 });

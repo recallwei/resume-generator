@@ -3,21 +3,20 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { Icon } from "@components";
+import { useEditorStore } from "@stores";
 import favicon from "/img/resume-generator.png";
 
 const router = useRouter();
 const { t } = useI18n();
 
-const emit = defineEmits(["toggleExpand"]);
-const expand = ref<boolean>(true);
+const editorStore = useEditorStore();
 
 function goHome() {
   router.push("/");
 }
 
 function toggleExpand() {
-  emit("toggleExpand", !expand.value);
-  expand.value = !expand.value;
+  editorStore.toggleToolbarState();
 }
 </script>
 
@@ -34,8 +33,9 @@ function toggleExpand() {
   </div>
   <div
     class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+    @click.prevent="toggleExpand"
   >
-    <Icon.Collapse v-if="expand" :onclick="toggleExpand" />
-    <Icon.Expand v-else class="cursor-pointer" :onclick="toggleExpand" />
+    <Icon.Expand v-if="editorStore.toolbarCollapsed" />
+    <Icon.Collapse v-else class="cursor-pointer" />
   </div>
 </template>

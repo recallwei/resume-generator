@@ -10,6 +10,8 @@
       "@components": ["./src/components"],
       "@hooks": ["./src/hooks"],
       "@hooks/*": ["./src/hooks/*"],
+      "@stores": ["./src/stores"],
+      "@stores/*": ["./src/stores/*"],
       "@assets/*": ["./src/assets/*"]
     },
     "types": ["element-plus/global"]
