@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import ResumeEditorHeader from "./ResumeEditorHeader.vue";
-import MarkdownEditor from "./MarkdownEditor.vue";
-import ResumePreview from "./ResumePreview.vue";
-import ResumeEditorToolbar from "./ResumeEditorToolbar.vue";
+import ResumeEditorHeader from "../Header/ResumeEditorHeader.vue";
+import MarkdownEditor from "../Main/MarkdownEditor.vue";
+import ResumePreview from "../Main/ResumePreview.vue";
+import ResumeEditorToolbar from "../Toolbar/ResumeEditorToolbar.vue";
 import { Splitpanes, Pane } from "splitpanes";
 import "splitpanes/dist/splitpanes.css";
 

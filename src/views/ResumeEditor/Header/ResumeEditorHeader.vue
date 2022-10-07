@@ -22,7 +22,7 @@ function toggleExpand() {
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-4 px-2">
     <img
       :src="favicon"
       class="cursor-pointer"
@@ -33,13 +33,9 @@ function toggleExpand() {
     <label class="select-none">{{ t("application.name") }}</label>
   </div>
   <div
-    class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center"
+    class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
   >
-    <Icon.Collapse
-      v-if="expand"
-      class="cursor-pointer"
-      :onclick="toggleExpand"
-    />
+    <Icon.Collapse v-if="expand" :onclick="toggleExpand" />
     <Icon.Expand v-else class="cursor-pointer" :onclick="toggleExpand" />
   </div>
 </template>

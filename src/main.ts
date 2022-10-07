@@ -5,6 +5,7 @@ import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import App from "./App.vue";
 import router from "./router";
 import i18n from "./i18n";
+import { createPinia } from "pinia";
 import "@hooks/useWorker";
 
 import "./assets/main.css";
@@ -12,6 +13,7 @@ import "./assets/main.css";
 const app = createApp(App);
 
 app.use(router);
+app.use(createPinia());
 app.use(i18n);
 app.use(ElementPlus, { size: "small", zIndex: 3000 });
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
