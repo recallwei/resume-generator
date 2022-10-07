@@ -31,7 +31,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  editorInstance.value?.dispose();
+  toRaw(editorInstance.value)?.dispose();
 });
 </script>
 
