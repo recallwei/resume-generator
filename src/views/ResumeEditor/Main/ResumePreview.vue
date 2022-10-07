@@ -14,5 +14,5 @@ const markdownRender = computed(() => {
 </script>
 
 <template>
-  <div class="h-full overflow-auto" v-html="markdownRender"></div>
+  <div class="h-full overflow-auto mx-4" v-html="markdownRender"></div>
 </template>
