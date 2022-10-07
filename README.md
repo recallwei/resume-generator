@@ -17,6 +17,7 @@ Use Markdown to write and generate a resume.
 - Pinia
 - Element+
 - Monaco Editor
+- Markdown It
 - Splitpanes
 
 ## Others
