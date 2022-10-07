@@ -5,6 +5,7 @@ import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import App from "./App.vue";
 import router from "./router";
 import i18n from "./i18n";
+import "@hooks/useWorker";
 
 import "./assets/main.css";
 

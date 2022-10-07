@@ -13,6 +13,7 @@ export default defineConfig({
       //"@": fileURLToPath(new URL("./src", import.meta.url)),
       "@views": path.resolve(__dirname, "src/views"),
       "@components": path.resolve(__dirname, "src/components"),
+      "@hooks": path.resolve(__dirname, "src/hooks"),
       "@assets": path.resolve(__dirname, "src/assets")
     }
   },

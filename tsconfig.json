@@ -8,6 +8,8 @@
       "@views": ["./src/views"],
       "@components/*": ["./src/components/*"],
       "@components": ["./src/components"],
+      "@hooks": ["./src/hooks"],
+      "@hooks/*": ["./src/hooks/*"],
       "@assets/*": ["./src/assets/*"]
     },
     "types": ["element-plus/global"]
