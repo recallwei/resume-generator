@@ -4,12 +4,12 @@ import * as monaco from "monaco-editor";
 import test from "@assets/test.md?raw";
 import test2 from "@assets/test2.md?raw";
 
-const editorRef = ref<HTMLElement>();
-let editorInstance: monaco.editor.IStandaloneCodeEditor;
+const editorRef = ref<HTMLElement | null>(null);
+const editorInstance = ref<monaco.editor.IStandaloneCodeEditor | null>(null);
 
 onMounted(() => {
-  if (editorRef.value && !editorInstance) {
-    editorInstance = monaco.editor.create(editorRef.value, {
+  if (editorRef.value && !editorInstance.value) {
+    editorInstance.value = monaco.editor.create(editorRef.value, {
       value: test2,
       language: "markdown",
       automaticLayout: true,
@@ -18,15 +18,15 @@ onMounted(() => {
       fontSize: 13
       //theme: "vs", // vs, vs-dark, hc-black
     });
-    editorInstance.onDidChangeModelContent(() => {
-      const value = editorInstance.getValue();
+    editorInstance.value.onDidChangeModelContent(() => {
+      const value = editorInstance.value?.getValue();
       console.log(value);
     });
   }
 });
 
 onUnmounted(() => {
-  editorInstance.dispose();
+  editorInstance.value?.dispose();
 });
 </script>
 
