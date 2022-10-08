@@ -7,7 +7,8 @@ const editorSettingsStore = useEditorSettingsStore();
 <template>
   <div class="h-full flex">
     <div class="grow h-full p-4">
-      <vue-slider v-model="editorSettingsStore.fontSize"></vue-slider>
+      <div class="mb-4">Font Size</div>
+      <vue-slider v-model="editorSettingsStore.fontSize" :min="10" :max="20" />
     </div>
     <div class="w-10 h-full border-l border-dashed"></div>
   </div>
