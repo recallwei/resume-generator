@@ -36,13 +36,10 @@ onUnmounted(() => {
 });
 
 editorSettingsStore.$subscribe((mutation, state) => {
-  console.log(mutation, state);
-  console.log(state.fontSize);
-
   toRaw(editorInstance.value)?.updateOptions({
     fontSize: state.fontSize,
     automaticLayout: true,
-    wordWrap: "on",
+    wordWrap: state.wordWarp ? "on" : "off",
     tabSize: 2
   });
 });
