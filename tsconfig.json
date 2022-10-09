@@ -4,10 +4,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@views/*": ["./src/views/*"],
       "@views": ["./src/views"],
-      "@components/*": ["./src/components/*"],
+      "@views/*": ["./src/views/*"],
       "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
       "@hooks": ["./src/hooks"],
       "@hooks/*": ["./src/hooks/*"],
       "@stores": ["./src/stores"],
