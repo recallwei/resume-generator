@@ -23,7 +23,7 @@ const activeTab = ref<TabType>("preview");
             </div>
             <vue-slider
               v-model="previewSettingsStore.fontSize"
-              :min="10"
+              :min="12"
               :max="20"
             />
             <div class="border-l w-full border" />
