@@ -34,4 +34,8 @@ const markdownRender = computed(() => {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.editor >>> p {
+  color: v-bind("previewSettingsStore.themeColor");
+}
 </style>

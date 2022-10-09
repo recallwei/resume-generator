@@ -12,6 +12,8 @@
       "@hooks/*": ["./src/hooks/*"],
       "@stores": ["./src/stores"],
       "@stores/*": ["./src/stores/*"],
+      "@interfaces": ["./src/interfaces"],
+      "@interfaces/*": ["./src/interfaces/*"],
       "@assets/*": ["./src/assets/*"]
     },
     "types": ["element-plus/global"]

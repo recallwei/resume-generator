@@ -1,19 +1,3 @@
----
-name: Haha Ha
-header:
-  - text: <span class="iconify" data-icon="tabler:phone"></span> (+1) 123-456-7890
-  - text: <span class="iconify" data-icon="tabler:mail"></span> renovamenzxh@gmail.com
-    link: mailto:renovamenzxh@gmail.com
-  - text: <span class="iconify" data-icon="tabler:brand-github"></span> Renovamen
-    link: https://github.com/Renovamen
-  - text: <span class="iconify" data-icon="tabler:brand-linkedin"></span> xiaohan-zou
-    link: https://www.linkedin.com/in/xiaohan-zou/
-  - text: <span class="iconify" data-icon="charm:person"></span> zxh.io
-    link: https://zxh.io
-  - text: <span class="iconify" data-icon="ic:outline-location-on"></span> 1234 Abc Street, Boston, MA 02215
-    newLine: true
----
-
 ## Education
 
 **University of Charles River**
