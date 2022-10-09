@@ -17,10 +17,10 @@ const editorStore = useEditorStore();
     </el-header>
     <el-main class="p-0 bg-[color:#F2F2F2]">
       <splitpanes class="default-theme h-full">
-        <pane maxSize="65" size="55">
+        <pane maxSize="65" size="44">
           <MarkdownEditor />
         </pane>
-        <pane minSize="20">
+        <pane minSize="20" size="44">
           <ResumePreview />
         </pane>
         <pane
