@@ -21,11 +21,11 @@ onMounted(() => {
       fontSize: editorSettingsStore.fontSize
       //theme: "vs", // vs, vs-dark, hc-black
     });
+    editorStore.changeContent(test);
     editorInstance.value.onDidChangeModelContent(() => {
       if (editorInstance.value) {
         const value = toRaw(editorInstance.value).getValue();
         editorStore.changeContent(value);
-        editorSettingsStore.changeFontSize(editorSettingsStore.fontSize + 1);
       }
     });
   }
