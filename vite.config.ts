@@ -10,14 +10,16 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      //"@": fileURLToPath(new URL("./src", import.meta.url)),
+      // "@": fileURLToPath(new URL("./src", import.meta.url)),
       "@views": path.resolve(__dirname, "src/views"),
       "@components": path.resolve(__dirname, "src/components"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@stores": path.resolve(__dirname, "src/stores"),
       "@interfaces": path.resolve(__dirname, "src/interfaces"),
       "@assets": path.resolve(__dirname, "src/assets")
-    }
+    },
+    // https://cn.vitejs.dev/config/shared-options.html#resolve-extensions
+    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"]
   },
   build: {
     chunkSizeWarningLimit: 5000,
