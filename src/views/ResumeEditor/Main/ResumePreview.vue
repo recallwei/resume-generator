@@ -34,12 +34,12 @@ const markdownRender = computed(() => {
   overflow-x: hidden;
   overflow-y: auto;
 }
-:deep(.editor) h1,
-:deep(.editor) h2,
-:deep(.editor) h3,
-:deep(.editor) h4,
-:deep(.editor) h5,
-:deep(.editor) h6 {
+.editor >>> h1,
+.editor >>> h2,
+.editor >>> h3,
+.editor >>> h4,
+.editor >>> h5,
+.editor >>> h6 {
   color: v-bind("previewSettingsStore.themeColor");
   font-weight: bolder;
   font-size: larger;
