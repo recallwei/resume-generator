@@ -9,7 +9,8 @@
     "rushstack",
     "Splitpanes",
     "stylelint",
-    "tailwindcss"
+    "tailwindcss",
+    "arrowParens"
   ],
   "flagWords": []
 }
