@@ -10,7 +10,8 @@
     "Splitpanes",
     "stylelint",
     "tailwindcss",
-    "arrowParens"
+    "arrowParens",
+    "vueuse"
   ],
   "flagWords": []
 }

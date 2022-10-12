@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed, watch } from "vue";
+import { useElementSize } from "@vueuse/core";
 import MarkdownIt from "markdown-it";
 
 import { useEditorStore, usePreviewSettingsStore } from "@stores";
@@ -12,14 +13,29 @@ const markdown = MarkdownIt();
 const markdownRender = computed(() => {
   return markdown.render(editorStore.markdownContent);
 });
+
+const previewContentRef = ref(null);
+
+const { width } = useElementSize(previewContentRef);
+
+const previewHeight = ref(1130);
+
+watch(width, () => {
+  previewHeight.value = width.value * Math.sqrt(2);
+});
 </script>
 
 <template>
   <div class="h-full overflow-auto p-4 editor">
     <div
+      ref="previewContentRef"
       v-html="markdownRender"
-      class="border border-black p-6 bg-white whitespace-normal break-words"
-      :style="{ fontSize: previewSettingsStore.fontSize + 'px' }"
+      class="border border-black p-6 bg-white whitespace-normal break-words max-w-[800px] h-[1130px]"
+      :style="{
+        fontSize: previewSettingsStore.fontSize + 'px',
+        height: previewHeight + 'px',
+        transform: 'scale(' + width / 800 + ', ' + width / 800 + ')'
+      }"
     ></div>
   </div>
 </template>

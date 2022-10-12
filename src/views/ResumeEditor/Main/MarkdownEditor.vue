@@ -22,7 +22,7 @@ onMounted(() => {
       fontSize: editorSettingsStore.fontSize
       //theme: "vs", // vs, vs-dark, hc-black
     });
-    editorStore.changeContent(test);
+    editorStore.changeContent(test2);
     editorInstance.value.onDidChangeModelContent(() => {
       if (editorInstance.value) {
         const value = toRaw(editorInstance.value).getValue();
@@ -47,5 +47,5 @@ editorSettingsStore.$subscribe((mutation, state) => {
 </script>
 
 <template>
-  <div ref="editorRef" class="h-full" />
+  <div ref="editorRef" class="h-full"></div>
 </template>
