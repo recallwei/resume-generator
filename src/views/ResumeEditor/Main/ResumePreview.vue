@@ -30,11 +30,14 @@ watch(width, () => {
     <div
       ref="previewContentRef"
       v-html="markdownRender"
-      class="border border-black p-6 bg-white whitespace-normal break-words max-w-[800px] h-[1130px]"
+      class="border border-black p-6 bg-white whitespace-normal break-words max-w-[800px] h-[1130px] my-auto"
       :style="{
         fontSize: previewSettingsStore.fontSize + 'px',
         height: previewHeight + 'px',
-        transform: 'scale(' + width / 800 + ', ' + width / 800 + ')'
+        transform:
+          width === 800
+            ? 'scale(1,1)'
+            : 'scale(' + width / 800 + ', ' + width / 800 + ')'
       }"
     ></div>
   </div>
