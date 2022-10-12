@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref, toRaw } from "vue";
 import * as monaco from "monaco-editor";
 import test from "@assets/test.md?raw";
+import test2 from "@assets/test_zhcn.md?raw";
 import { useEditorStore, useEditorSettingsStore } from "@stores";
 
 const editorRef = ref<HTMLElement | null>(null);
@@ -13,7 +14,7 @@ const editorSettingsStore = useEditorSettingsStore();
 onMounted(() => {
   if (editorRef.value && !editorInstance.value) {
     editorInstance.value = monaco.editor.create(editorRef.value, {
-      value: test,
+      value: test2,
       language: "markdown",
       automaticLayout: true,
       wordWrap: "on",
