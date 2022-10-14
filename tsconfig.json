@@ -16,8 +16,7 @@
       "@interfaces/*": ["./src/interfaces/*"],
       "@assets/*": ["./src/assets/*"]
     },
-    "types": ["element-plus/global"],
-    "skipLibCheck": true // Temporary solution for build error caused by vue slider component package.
+    "types": ["element-plus/global"]
   },
   "references": [
     {
