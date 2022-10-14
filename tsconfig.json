@@ -17,7 +17,7 @@
       "@assets/*": ["./src/assets/*"]
     },
     "types": ["element-plus/global"],
-    "skipLibCheck": false // Temporary solution for build error caused by vue slider component package.
+    "skipLibCheck": true // Temporary solution for build error caused by vue slider component package.
   },
   "references": [
     {
