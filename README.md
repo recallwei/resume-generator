@@ -24,3 +24,4 @@ Use Markdown to write and generate a resume.
 
 - Host by Vercel
 - Inspired by「[Oh, CV!](https://ohcv.zxh.io)」, [Renovamen](https://github.com/Renovamen)
+- Icon by Icônes

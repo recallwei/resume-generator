@@ -11,7 +11,8 @@
     "stylelint",
     "tailwindcss",
     "arrowParens",
-    "vueuse"
+    "vueuse",
+    "Icônes"
   ],
   "flagWords": []
 }
