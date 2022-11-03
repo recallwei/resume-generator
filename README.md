@@ -10,8 +10,6 @@ Use Markdown to write and generate a resume.
 
 ## Library
 
-- Tailwind
-- DaisyUI
 - vue-router
 - vue-i18n
 - Pinia
