@@ -12,7 +12,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "style-lint": "npx stylelint **/*.css",
-    "prepare": "cd .. && husky install web/.husky"
+    "prepare": "cd .. && husky install pre-web/.husky"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.9",
