@@ -10,10 +10,9 @@ Use Markdown to write and generate a resume.
 
 ## Library
 
-- vue-router
-- vue-i18n
+- Vue Router
 - Pinia
-- Element+
+- Naive UI
 - Monaco Editor
 - Markdown It
 - Splitpanes
