@@ -1,18 +1,22 @@
+import { ref } from "vue";
 import { defineStore } from "pinia";
 
-export const useEditorStore = defineStore("editor", {
-  state: () => {
-    return {
-      toolbarCollapsed: false,
-      markdownContent: "",
-    };
-  },
-  actions: {
-    toggleToolbarState() {
-      this.toolbarCollapsed = !this.toolbarCollapsed;
-    },
-    changeContent(content: string) {
-      this.markdownContent = content;
-    },
-  },
+export const useEditorStore = defineStore("editor", () => {
+  const toolbarCollapsed = ref<boolean>(false);
+  const markdownContent = ref<string>("");
+
+  function toggleToolbarState() {
+    toolbarCollapsed.value = !toolbarCollapsed.value;
+  }
+
+  function changeMarkdownContent(content: string) {
+    markdownContent.value = content;
+  }
+
+  return {
+    toolbarCollapsed,
+    markdownContent,
+    toggleToolbarState,
+    changeMarkdownContent,
+  };
 });

@@ -1,18 +1,17 @@
+import { ref } from "vue";
 import { defineStore } from "pinia";
 
-export const useEditorSettingsStore = defineStore("editorSettings", {
-  state: () => {
-    return {
-      fontSize: 13,
-      wordWrap: true,
-    };
-  },
-  actions: {
-    changeFontSize(fontSize: number) {
-      this.fontSize = fontSize;
-    },
-    toggleWordWrap() {
-      this.wordWrap = !this.wordWrap;
-    },
-  },
+export const useEditorSettingsStore = defineStore("editorSettings", () => {
+  const fontSize = ref<number>(13);
+  const wordWrap = ref<boolean>(true);
+
+  function changeFontSize(value: number) {
+    fontSize.value = value;
+  }
+
+  function toggleWordWrap() {
+    wordWrap.value = !wordWrap.value;
+  }
+
+  return { fontSize, wordWrap, changeFontSize, toggleWordWrap };
 });
