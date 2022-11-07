@@ -9,7 +9,8 @@ function onClickStartBtn() {
 </script>
 
 <template>
-  <div
+  <div></div>
+  <!-- <div
     class="relative w-screen h-screen select-none bg-cover bg-center bg-home"
   >
     <div class="inset-0 absolute m-auto h-fit w-fit">
@@ -56,5 +57,7 @@ function onClickStartBtn() {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
+
+<style lang="scss"></style>

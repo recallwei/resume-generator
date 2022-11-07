@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@views/Home/HomePage.vue";
+import Home from "@views/Home/index.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomePage,
+      component: Home,
     },
     {
       path: "/resume-editor",
@@ -18,7 +18,7 @@ const router = createRouter({
     {
       path: "/:pathMatch(.*)*",
       name: "notfound",
-      component: () => import("@views/NotFound/NotFoundPage.vue"),
+      component: () => import("@views/NotFound/index.vue"),
     },
   ],
 });
