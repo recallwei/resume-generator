@@ -19,7 +19,7 @@ onMounted(() => {
       automaticLayout: true,
       wordWrap: "on",
       tabSize: 2,
-      fontSize: editorSettingsStore.fontSize
+      fontSize: editorSettingsStore.fontSize,
       //theme: "vs", // vs, vs-dark, hc-black
     });
     editorStore.changeContent(test2);
@@ -41,7 +41,7 @@ editorSettingsStore.$subscribe((mutation, state) => {
     fontSize: state.fontSize,
     automaticLayout: true,
     wordWrap: state.wordWarp ? "on" : "off",
-    tabSize: 2
+    tabSize: 2,
   });
 });
 </script>

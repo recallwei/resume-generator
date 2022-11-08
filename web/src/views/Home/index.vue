@@ -1,15 +1,20 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import { NButton } from "naive-ui";
 import { Icon, GitHubButton } from "@components";
+
 const router = useRouter();
 const VERSION = "1.0.0";
-function onClickStartBtn() {
+
+function onClickStartButton() {
   router.push("/resume-editor");
 }
 </script>
 
 <template>
-  <div></div>
+  <div class="backgroundWrapper">
+    <NButton type="primary">Default</NButton>
+  </div>
   <!-- <div
     class="relative w-screen h-screen select-none bg-cover bg-center bg-home"
   >
@@ -60,4 +65,9 @@ function onClickStartBtn() {
   </div> -->
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.backgroundWrapper {
+  height: 100vh;
+  width: 100vw;
+}
+</style>
