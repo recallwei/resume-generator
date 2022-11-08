@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { NButton } from "naive-ui";
+import { NButton, NGradientText } from "naive-ui";
 import { Icon, GitHubButton } from "@components";
 
 const router = useRouter();
@@ -12,8 +12,11 @@ function onClickStartButton() {
 </script>
 
 <template>
-  <div class="backgroundWrapper">
-    <NButton type="primary">Default</NButton>
+  <div class="background-wrapper">
+    <div class="operation-area">
+      <NGradientText>简历生成器</NGradientText>
+      <NButton type="primary" @click="onClickStartButton">开始</NButton>
+    </div>
   </div>
   <!-- <div
     class="relative w-screen h-screen select-none bg-cover bg-center bg-home"
@@ -66,8 +69,21 @@ function onClickStartButton() {
 </template>
 
 <style lang="scss" scoped>
-.backgroundWrapper {
+.background-wrapper {
   height: 100vh;
   width: 100vw;
+  position: relative;
+  .operation-area {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    .n-gradient-text {
+      font-size: 100px;
+    }
+  }
 }
 </style>
