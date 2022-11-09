@@ -1,22 +1,31 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { NButton, NGradientText } from "naive-ui";
+import { NButton, NGradientText, NSpace } from "naive-ui";
 import { Icon, GitHubButton } from "@components";
 
 const router = useRouter();
 
 const VERSION = "1.0.0";
 
-function onClickStartButton() {
+function navToEditor() {
   router.push("/resume-editor");
+}
+
+function navToDoc() {
+  router.push("/doc");
 }
 </script>
 
 <template>
   <div class="background-wrapper">
     <div class="operation-area">
-      <NGradientText>简历生成器</NGradientText>
-      <NButton type="primary" @click="onClickStartButton">开始</NButton>
+      <NGradientText class="title">简历生成器</NGradientText>
+      <NGradientText class="version">1.0.0</NGradientText>
+      <NSpace>
+        <NButton type="primary" @click="navToEditor">开始</NButton>
+        <NButton type="primary" @click="navToDoc">其他</NButton>
+      </NSpace>
+      <GitHubButton />
     </div>
   </div>
   <!-- <div
@@ -87,8 +96,14 @@ function onClickStartButton() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .n-gradient-text {
+    gap: 8px;
+    .title {
       font-size: 100px;
+      user-select: none;
+    }
+    .version {
+      font-size: 20px;
+      font-weight: 600;
       user-select: none;
     }
   }

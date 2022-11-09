@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import("@views/ResumeEditor/index.vue"),
     },
     {
+      path: "/",
+      name: "others",
+      component: () => import("@views/Others/index.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "notfound",
       component: () => import("@views/NotFound/index.vue"),
