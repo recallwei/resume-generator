@@ -15,7 +15,7 @@ const router = createRouter({
       component: () => import("@views/ResumeEditor/index.vue"),
     },
     {
-      path: "/",
+      path: "/others",
       name: "others",
       component: () => import("@views/Others/index.vue"),
     },

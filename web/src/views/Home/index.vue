@@ -12,7 +12,7 @@ function navToEditor() {
 }
 
 function navToDoc() {
-  router.push("/doc");
+  router.push("/others");
 }
 </script>
 
