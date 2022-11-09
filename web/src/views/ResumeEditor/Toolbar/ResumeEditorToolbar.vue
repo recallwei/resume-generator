@@ -12,7 +12,8 @@ const activeTab = ref<TabType>("preview");
 </script>
 
 <template>
-  <div class="h-full flex">
+  <div></div>
+  <!-- <div class="h-full flex">
     <div class="grow h-full flex flex-col gap-2 pr-1 text-sm">
       <el-tabs v-model="activeTab">
         <el-tab-pane label="预览" name="preview">
@@ -52,5 +53,5 @@ const activeTab = ref<TabType>("preview");
       </el-tabs>
     </div>
     <div class="w-10 h-full border-l border-dashed"></div>
-  </div>
+  </div> -->
 </template>

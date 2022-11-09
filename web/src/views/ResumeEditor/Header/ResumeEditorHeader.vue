@@ -24,7 +24,8 @@ function goGitHubRepo() {
 </script>
 
 <template>
-  <div class="flex items-center gap-4 px-2">
+  <div></div>
+  <!-- <div class="flex items-center gap-4 px-2">
     <img
       :src="favicon"
       class="cursor-pointer"
@@ -43,5 +44,5 @@ function goGitHubRepo() {
       <Icon.Collapse v-else class="cursor-pointer" />
     </div>
     <Icon.GitHub class="cursor-pointer" :onClick="goGitHubRepo" />
-  </div>
+  </div> -->
 </template>

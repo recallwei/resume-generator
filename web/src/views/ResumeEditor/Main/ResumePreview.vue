@@ -27,7 +27,7 @@ watch(width, () => {
 
 <template>
   <div class="h-full overflow-auto p-4 editor">
-    <div
+    <!-- <div
       ref="previewContentRef"
       v-html="markdownRender"
       class="border border-black p-6 bg-white whitespace-normal break-words max-w-[800px] mx-auto"
@@ -37,9 +37,9 @@ watch(width, () => {
         transform:
           width === 800
             ? 'scale(1,1)'
-            : `scale(${width / 800},${previewHeight / 1130} )`
+            : `scale(${width / 800},${previewHeight / 1130} )`,
       }"
-    ></div>
+    ></div> -->
   </div>
 </template>
 
@@ -53,14 +53,15 @@ watch(width, () => {
   overflow-x: hidden;
   overflow-y: auto;
 }
+/* }
 .editor :deep(h1),
 .editor :deep(h2),
 .editor :deep(h3),
 .editor :deep(h4),
-.editor :deep(h5),
-.editor :deep(h6) {
-  color: v-bind("previewSettingsStore.themeColor");
+.editor :deep(h5), */
+/* .editor :deep(h6) {
+  // color: v-bind("previewSettingsStore.themeColor");
   font-weight: bolder;
   font-size: larger;
-}
+} */
 </style>

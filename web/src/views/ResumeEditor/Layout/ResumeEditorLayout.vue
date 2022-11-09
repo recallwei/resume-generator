@@ -11,7 +11,8 @@ const editorStore = useEditorStore();
 </script>
 
 <template>
-  <el-container class="h-screen">
+  <div></div>
+  <!-- <el-container class="h-screen">
     <el-header height="64px" class="border-b flex items-center justify-between">
       <ResumeEditorHeader />
     </el-header>
@@ -33,5 +34,5 @@ const editorStore = useEditorStore();
         </pane>
       </splitpanes>
     </el-main>
-  </el-container>
+  </el-container> -->
 </template>
