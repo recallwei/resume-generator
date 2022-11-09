@@ -4,6 +4,7 @@ import { NButton, NGradientText } from "naive-ui";
 import { Icon, GitHubButton } from "@components";
 
 const router = useRouter();
+
 const VERSION = "1.0.0";
 
 function onClickStartButton() {
@@ -76,13 +77,19 @@ function onClickStartButton() {
   .operation-area {
     position: absolute;
     margin: auto;
+    padding-bottom: 150px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .n-gradient-text {
       font-size: 100px;
+      user-select: none;
     }
   }
 }
