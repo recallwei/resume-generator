@@ -1,6 +1,9 @@
 {
-  "name": "vue",
+  "name": "resume-generator",
   "version": "0.0.0",
+  "description": "",
+  "author": "Bruce Song",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -9,9 +12,13 @@
     "test:unit": "vitest --environment jsdom --root src/",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@vueuse/core": "^9.6.0",
+    "axios": "^1.2.1",
+    "nprogress": "^0.2.0",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
