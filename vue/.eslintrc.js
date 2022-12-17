@@ -22,7 +22,7 @@ module.exports = {
     quotes: ["error", "double"],
     semi: ["error", "never"],
     "comma-dangle": "off",
-    "vue/multi-word-component-names": "off",
+    "vue/multi-word-component-names": ["error", { ignores: ["index"] }],
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "import/extensions": "off",
     "import/prefer-default-export": "off"
