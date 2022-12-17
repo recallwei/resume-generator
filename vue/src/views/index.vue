@@ -18,7 +18,7 @@ const navToEditor = () => router.push("/editor")
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   height: 100vh;
   display: flex;

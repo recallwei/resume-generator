@@ -26,7 +26,7 @@ const isDEV = import.meta.env.DEV // 仅 DEV 模式下显示 Naive UI 主题编�
   </n-config-provider>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   height: auto;
 }
