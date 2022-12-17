@@ -9,6 +9,8 @@ import {
   zhCN,
   dateZhCN
 } from "naive-ui"
+
+const isDEV = import.meta.env.DEV // 仅 DEV 模式下显示 Naive UI 主题编辑器
 </script>
 
 <template>
@@ -20,7 +22,7 @@ import {
   >
     <RouterView />
     <n-global-style />
-    <n-theme-editor />
+    <n-theme-editor v-if="isDEV" />
   </n-config-provider>
 </template>
 
