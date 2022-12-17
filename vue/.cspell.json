@@ -12,6 +12,7 @@
     }
   ],
   "ignorePaths": [
+    "src/main.ts",
     "node_modules",
     "package.json",
     ".cspell.json",
