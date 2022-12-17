@@ -19,11 +19,19 @@ module.exports = {
     ecmaVersion: "latest"
   },
   rules: {
-    quotes: "off",
-    semi: "off",
+    quotes: ["error", "double"],
+    semi: ["error", "never"],
     "comma-dangle": "off",
-    "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": "off",
-    "import/extensions": "off"
+    "vue/multi-word-component-names": "off",
+    "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
+    "import/extensions": "off",
+    "import/prefer-default-export": "off"
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
+      }
+    }
   }
 }
