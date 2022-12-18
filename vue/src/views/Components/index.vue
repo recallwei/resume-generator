@@ -7,12 +7,13 @@ const sliderValue = ref(2)
 
 <template>
   <div class="container">
+    <span>{{ "Magic Slider" }}</span>
     <magic-slider
       v-model="sliderValue"
       :width="200"
       class="magic-slider"
     />
-    <span>{{ "当前选中值：" + sliderValue }}</span>
+    <span>{{ "Current selected value: " + sliderValue }}</span>
   </div>
 </template>
 
@@ -22,6 +23,6 @@ const sliderValue = ref(2)
   margin: 60px auto;
 }
 .magic-slider {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 </style>
