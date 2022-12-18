@@ -4,7 +4,7 @@ import { useRouter } from "vue-router"
 
 const router = useRouter()
 
-const navToEditor = () => router.push("/editor")
+const navTo = (url: string) => router.push(url)
 </script>
 
 <template>
@@ -12,13 +12,16 @@ const navToEditor = () => router.push("/editor")
     <n-button type="primary">
       {{ "Get Started" }}
     </n-button>
-    <n-button @click="navToEditor">
+    <n-button @click="navTo('/editor')">
       {{ "Editor" }}
+    </n-button>
+    <n-button @click="navTo('/components')">
+      {{ "Components Test" }}
     </n-button>
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .container {
   height: 100vh;
   display: flex;
