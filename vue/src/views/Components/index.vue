@@ -10,8 +10,9 @@ const sliderValue = ref(2)
     <magic-slider
       v-model="sliderValue"
       :width="200"
+      class="magic-slider"
     />
-    {{ sliderValue }}
+    <span>{{ "当前选中值：" + sliderValue }}</span>
   </div>
 </template>
 
@@ -19,5 +20,8 @@ const sliderValue = ref(2)
 .container {
   width: 1260px;
   margin: 60px auto;
+}
+.magic-slider {
+  margin-bottom: 10px;
 }
 </style>
