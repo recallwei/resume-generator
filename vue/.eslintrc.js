@@ -11,9 +11,9 @@ module.exports = {
   globals: {},
   extends: [
     "plugin:vue/vue3-recommended",
-    "eslint:recommended",
     "@vue/eslint-config-typescript",
-    "airbnb-base"
+    "airbnb-base",
+    "@vue/eslint-config-prettier"
   ],
   parserOptions: {
     ecmaVersion: "latest"
