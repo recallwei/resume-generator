@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"
+import NProgress from "nprogress"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,5 +21,13 @@ const router = createRouter({
     }
   ]
 })
+
+// 导航守卫
+router.beforeEach((to, from) => {
+  if (to.path !== from.path) {
+    NProgress.start()
+  }
+})
+router.afterEach(() => NProgress.done())
 
 export default router

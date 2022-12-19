@@ -7,6 +7,7 @@ import router from "./router"
 
 import "./assets/main.scss"
 import "vfonts/FiraCode.css"
+import "nprogress/nprogress.css"
 
 const app = createApp(App)
 

@@ -7,7 +7,7 @@ const sliderValue = ref(2)
 
 <template>
   <div class="container">
-    <b>{{ "Components Test Page" }}</b>
+    <div class="page-title">{{ "Components Test Page" }}</div>
     <div class="group-wrapper">
       <section class="section">
         <span>{{ "Magic Slider" }}</span>
@@ -41,6 +41,9 @@ const sliderValue = ref(2)
       padding: 16px;
     }
   }
+}
+.page-title {
+  margin-bottom: 20px;
 }
 .magic-slider {
   margin: 10px 0;
