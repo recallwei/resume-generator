@@ -1,0 +1,1 @@
+export { siteMetaData } from "./site"
