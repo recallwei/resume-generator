@@ -1,22 +1,33 @@
 <script setup lang="ts">
 import github from "/icons/github.png"
+import { useSiteMetaData } from "@/hooks"
 
-const REPO_URL = "https://github.com/recallwei/resume-generator"
+const { repoUrl } = useSiteMetaData()
+
+type Props = {
+  width?: number
+  height?: number
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  width: 28,
+  height: 28
+})
 </script>
 
 <template>
-  <div class="github">
+  <div class="link-wrapper">
     <a
-      :href="REPO_URL"
+      :href="repoUrl"
       target="_blank"
       rel="noopener noreferrer"
-      class="rounded-full bg-gray-50 p-1 shadow-xl transition-colors hover:bg-gray-200 active:bg-gray-50"
+      class="link"
       title="GitHub"
     >
       <img
         :src="github"
-        width="28"
-        height="28"
+        :width="props.width"
+        :height="props.height"
         loading="eager"
       />
     </a>
@@ -24,23 +35,25 @@ const REPO_URL = "https://github.com/recallwei/resume-generator"
 </template>
 
 <style scoped lang="scss">
-.github {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
+.link-wrapper {
+  width: fit-content;
+  height: fit-content;
 }
 .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   border-radius: 9999px;
-  background-color: $gray-50;
-  padding: 0.25rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: rgb(249 250 251);
+  padding: 4px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   transition: background-color 0.2s ease-in-out;
   &:hover {
-    background-color: $gray-200;
+    background-color: rgb(229 231 235);
   }
   &:active {
-    background-color: $gray-50;
+    background-color: rgb(249 250 251);
   }
 }
 </style>
