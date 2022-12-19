@@ -16,7 +16,7 @@ export default defineConfig({
   },
   server: {
     host: true,
-    port: 3333, // 应用端口号
+    port: 4057, // 应用端口号
     strictPort: true, // 端口被占用时，终止应用服务
     open: false, // 是否自动打开浏览器，如果是字符串，则会被当作 URL 的路径名
     proxy: {
