@@ -9,15 +9,9 @@ const navTo = (url: string) => router.push(url)
 
 <template>
   <main class="container">
-    <n-button type="primary">
-      {{ "Get Started" }}
-    </n-button>
-    <n-button @click="navTo('/editor')">
-      {{ "Editor" }}
-    </n-button>
-    <n-button @click="navTo('/components')">
-      {{ "Components Test" }}
-    </n-button>
+    <n-button type="primary">Get Started</n-button>
+    <n-button @click="navTo('/editor')">Editor</n-button>
+    <n-button @click="navTo('/components')">Components Test</n-button>
   </main>
 </template>
 
