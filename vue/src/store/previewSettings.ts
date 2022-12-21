@@ -8,11 +8,11 @@ export const usePreviewSettingsStore = defineStore("previewSettings", () => {
     themeColor: "#CA3832"
   })
 
-  function changeFontSize(fontSize: number) {
+  const changeFontSize = (fontSize: number) => {
     previewSettings.value.fontSize = fontSize
   }
 
-  function changeThemeColor(themeColor: string) {
+  const changeThemeColor = (themeColor: string) => {
     previewSettings.value.themeColor = themeColor
   }
 

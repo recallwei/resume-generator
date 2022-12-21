@@ -5,11 +5,11 @@ export const useEditorSettingsStore = defineStore("editorSettings", () => {
   const fontSize = ref<number>(13)
   const wordWrap = ref<boolean>(true)
 
-  function changeFontSize(value: number) {
+  const changeFontSize = (value: number) => {
     fontSize.value = value
   }
 
-  function toggleWordWrap() {
+  const toggleWordWrap = () => {
     wordWrap.value = !wordWrap.value
   }
 

@@ -4,6 +4,8 @@ import { useRouter } from "vue-router"
 
 const router = useRouter()
 
+const APP_VERSION = "1.0.0"
+
 const navTo = (url: string) => router.push(url)
 </script>
 

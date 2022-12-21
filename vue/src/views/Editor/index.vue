@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Layout from "./Layout"
+</script>
 
 <template>
-  <div></div>
+  <layout />
 </template>
-
-<style scoped lang="scss"></style>
