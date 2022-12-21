@@ -1,30 +1,35 @@
 <script setup lang="ts">
-// import { useRouter } from "vue-router"
-// // import { useI18n } from "vue-i18n";
-// import { Icon } from "@components"
-// import { useEditorStore } from "@/stores"
-// import favicon from "/img/resume-generator.png"
+import { useRouter } from "vue-router"
+import { GitHubButton } from "@/components"
+import { useEditorStore } from "@/store"
+import { useSiteMetaData } from "@/hooks"
+import favicon from "/images/resume-generator.png"
 
-// const router = useRouter()
-// // const { t } = useI18n();
+const router = useRouter()
 
-// const editorStore = useEditorStore()
+const editorStore = useEditorStore()
+const siteMetaData = useSiteMetaData()
 
-// function goHome() {
-//   router.push("/")
-// }
+const backToHome = () => router.push("/")
 
-// function toggleExpand() {
-//   editorStore.toggleToolbarState()
-// }
+const toggleExpand = () => editorStore.toggleToolbarState()
 
-// function goGitHubRepo() {
-//   window.open("https://github.com/recallwei/resume-generator")
-// }
+const goGitHubRepo = () => window.open(siteMetaData.repoUrl)
 </script>
 
 <template>
-  <div></div>
+  <div class="left-area-wrapper">
+    <img
+      :src="favicon"
+      class="cursor-pointer"
+      width="32"
+      height="32"
+      @click="backToHome"
+    />
+  </div>
+  <div class="right-area-wrapper">
+    <git-hub-button @click="goGitHubRepo" />
+  </div>
   <!-- <div class="flex items-center gap-4 px-2">
     <img
       :src="favicon"
@@ -46,3 +51,20 @@
     <Icon.GitHub class="cursor-pointer" :onClick="goGitHubRepo" />
   </div> -->
 </template>
+
+<style scoped lang="scss">
+.left-area-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+}
+.right-area-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+</style>

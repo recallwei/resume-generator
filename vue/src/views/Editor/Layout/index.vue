@@ -52,6 +52,7 @@ const editorStore = useEditorStore()
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 .content {
   height: calc(100% - 48px);
