@@ -42,6 +42,8 @@ const router = createRouter({
   ]
 })
 
+NProgress.configure({ showSpinner: false })
+
 // 导航守卫
 router.beforeEach((to, from) => {
   if (to.path !== from.path) {
