@@ -1,5 +1,5 @@
-import MagicSlider from "./MagicSlider.vue"
+import MagicSlider from "./MagicSlider"
 
-import GitHubButton from "./GitHubButton.vue"
+import GitHubButton from "./GitHubButton"
 
 export { MagicSlider, GitHubButton }
