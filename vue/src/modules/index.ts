@@ -1,1 +1,1 @@
-export {}
+export { withNProgress } from "./nprogress"

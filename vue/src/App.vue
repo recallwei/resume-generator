@@ -10,7 +10,8 @@ import {
   dateZhCN
 } from "naive-ui"
 
-const isDEV = import.meta.env.DEV // 仅 DEV 模式下显示 Naive UI 主题编辑器
+// 仅 DEV 模式下显示 Naive UI 主题编辑器
+const isDEV = import.meta.env.DEV
 </script>
 
 <template>

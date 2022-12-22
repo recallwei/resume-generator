@@ -1,6 +1,6 @@
-type PreviewSettingsType = {
+type PreviewSettings = {
   fontSize: number
   themeColor: string
 }
 
-export type { PreviewSettingsType }
+export type { PreviewSettings }

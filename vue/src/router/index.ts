@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router"
-import NProgress from "nprogress"
 import { useSiteMetaData } from "@/hooks"
 
 const { appName } = useSiteMetaData()
@@ -41,16 +40,5 @@ const router = createRouter({
     }
   ]
 })
-
-NProgress.configure({ showSpinner: false })
-
-// 导航守卫
-router.beforeEach((to, from) => {
-  if (to.path !== from.path) {
-    NProgress.start()
-    document.title = to.meta.title === appName ? to.meta.title : `${to.meta.title} | ${appName}`
-  }
-})
-router.afterEach(() => NProgress.done())
 
 export default router

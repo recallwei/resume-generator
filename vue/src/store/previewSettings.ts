@@ -1,9 +1,9 @@
 import { ref } from "vue"
 import { defineStore } from "pinia"
-import type { PreviewSettingsType } from "@/interfaces"
+import type { PreviewSettings } from "@/interfaces"
 
 export const usePreviewSettingsStore = defineStore("previewSettings", () => {
-  const previewSettings = ref<PreviewSettingsType>({
+  const previewSettings = ref<PreviewSettings>({
     fontSize: 13,
     themeColor: "#CA3832"
   })

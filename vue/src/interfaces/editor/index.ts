@@ -1,1 +1,1 @@
-export type { PreviewSettingsType } from "./previewSettings"
+export type { PreviewSettings } from "./previewSettings"

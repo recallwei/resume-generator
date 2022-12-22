@@ -1,4 +1,4 @@
-import type { SiteMetaData } from "./site/meta"
-import type { PreviewSettingsType } from "./editor"
+import type { SiteMetaData } from "./site"
+import type { PreviewSettings } from "./editor"
 
-export type { SiteMetaData, PreviewSettingsType }
+export type { SiteMetaData, PreviewSettings }
