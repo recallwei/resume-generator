@@ -1,6 +1,6 @@
-import EditorHeader from "./EditorHeader"
-import MarkdownEditor from "./MarkdownEditor"
-import ResumePreview from "./ResumePreview"
-import Toolbar from "./Toolbar"
+import EditorHeader from "./EditorHeader.vue"
+import MarkdownEditor from "./MarkdownEditor.vue"
+import ResumePreview from "./ResumePreview.vue"
+import Toolbar from "./Toolbar.vue"
 
 export { EditorHeader, MarkdownEditor, ResumePreview, Toolbar }

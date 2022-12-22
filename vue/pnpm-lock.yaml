@@ -7,6 +7,7 @@ specifiers:
   '@types/jsdom': ^20.0.1
   '@types/node': ^18.11.16
   '@types/nprogress': ^0.2.0
+  '@types/splitpanes': ^2.2.1
   '@typescript-eslint/parser': ^5.47.0
   '@vicons/material': ^0.12.0
   '@vitejs/plugin-vue': ^4.0.0
@@ -65,6 +66,7 @@ devDependencies:
   '@types/jsdom': 20.0.1
   '@types/node': 18.11.16
   '@types/nprogress': 0.2.0
+  '@types/splitpanes': 2.2.1
   '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
   '@vicons/material': 0.12.0
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.1+vue@3.2.45
@@ -977,6 +979,12 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
+  /@types/splitpanes/2.2.1:
+    resolution: {integrity: sha512-H5BgO6UdJRzz5ddRzuGvLBiPSPEuuHXb5ET+7avLLrEx1uc7f5Ut5oLMDQsfvGtHBBAFczt1QNYuDf27wHbvDQ==}
+    dependencies:
+      vue: 2.7.14
+    dev: true
+
   /@types/tough-cookie/4.0.2:
     resolution: {integrity: sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==}
     dev: true
@@ -1261,6 +1269,14 @@ packages:
     dependencies:
       '@vue/compiler-core': 3.2.45
       '@vue/shared': 3.2.45
+
+  /@vue/compiler-sfc/2.7.14:
+    resolution: {integrity: sha512-aNmNHyLPsw+sVvlQFQ2/8sjNuLtK54TC6cuKnVzAY93ks4ZBrvwQSnkkIh7bsbNhum5hJBS00wSDipQ937f5DA==}
+    dependencies:
+      '@babel/parser': 7.20.5
+      postcss: 8.4.20
+      source-map: 0.6.1
+    dev: true
 
   /@vue/compiler-sfc/3.2.45:
     resolution: {integrity: sha512-1jXDuWah1ggsnSAOGsec8cFjT/K6TMZ0sPL3o3d84Ft2AYZi2jWJgRMjw4iaK0rBfA89L5gw427H4n1RZQBu6Q==}
@@ -1921,6 +1937,10 @@ packages:
 
   /csstype/3.0.11:
     resolution: {integrity: sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==}
+    dev: true
+
+  /csstype/3.1.1:
+    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: true
 
   /dargs/7.0.0:
@@ -4788,6 +4808,13 @@ packages:
       '@volar/vue-language-core': 1.0.13
       '@volar/vue-typescript': 1.0.13
       typescript: 4.9.4
+    dev: true
+
+  /vue/2.7.14:
+    resolution: {integrity: sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==}
+    dependencies:
+      '@vue/compiler-sfc': 2.7.14
+      csstype: 3.1.1
     dev: true
 
   /vue/3.2.45:

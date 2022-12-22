@@ -1,3 +1,4 @@
 Pinia
 splitpanes
 nprogress
+vicons
