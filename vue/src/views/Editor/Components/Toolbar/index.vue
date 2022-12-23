@@ -2,6 +2,8 @@
 import { ref } from "vue"
 import { NElement, NTabs, NTabPane } from "naive-ui"
 import { useEditorSettingsStore, usePreviewSettingsStore } from "@/store"
+import EditorTools from "./EditorTools"
+import PreviewTools from "./PreviewTools"
 
 const editorSettingsStore = useEditorSettingsStore()
 const previewSettingsStore = usePreviewSettingsStore()
@@ -16,19 +18,19 @@ const previewSettingsStore = usePreviewSettingsStore()
       justify-content="center"
     >
       <n-tab-pane
-        name="preview"
-        tab="Preview"
-      >
-        预览
-      </n-tab-pane>
-      <n-tab-pane
         name="editor"
         tab="Editor"
       >
-        编辑器
+        <editor-tools />
+      </n-tab-pane>
+      <n-tab-pane
+        name="preview"
+        tab="Preview"
+      >
+        <preview-tools />
       </n-tab-pane>
     </n-tabs>
-    <div class=""></div>
+    <div class="shortcut-menu"></div>
   </n-element>
 </template>
 
@@ -37,10 +39,16 @@ const previewSettingsStore = usePreviewSettingsStore()
   background-color: var(--card-color);
   min-height: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   padding-right: 6px;
   padding-top: 6px;
   padding-bottom: 6px;
+}
+.shortcut-menu {
+  width: 30px;
+  min-height: 100%;
+  border-left-width: 1px solid var(--border-color);
+  border-left-style: dashed;
+  flex-grow: 1;
 }
 </style>
