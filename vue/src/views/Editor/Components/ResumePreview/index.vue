@@ -44,7 +44,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
   overflow-y: auto;
   padding: 16px;
   height: 100%;
-  background-color: var(--card-color);
+  // background-color: var(--card-color);
   &::-webkit-scrollbar {
     display: none; /* Chrome Safari */
   }

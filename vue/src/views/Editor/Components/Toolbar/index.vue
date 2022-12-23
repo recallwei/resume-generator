@@ -1,65 +1,46 @@
 <script setup lang="ts">
-import { NElement } from "naive-ui"
-// import { ref } from "vue"
-// import { Icon } from "@components"
-// import { useEditorSettingsStore, usePreviewSettingsStore } from "@/stores"
+import { ref } from "vue"
+import { NElement, NTabs, NTabPane } from "naive-ui"
+import { useEditorSettingsStore, usePreviewSettingsStore } from "@/store"
 
-// const editorSettingsStore = useEditorSettingsStore()
-// const previewSettingsStore = usePreviewSettingsStore()
-
-// type TabType = "editor" | "preview"
-
-// const activeTab = ref<TabType>("preview")
+const editorSettingsStore = useEditorSettingsStore()
+const previewSettingsStore = usePreviewSettingsStore()
 </script>
 
 <template>
-  <n-element class="container"></n-element>
-  <!-- <div class="h-full flex">
-    <div class="grow h-full flex flex-col gap-2 pr-1 text-sm">
-      <el-tabs v-model="activeTab">
-        <el-tab-pane label="预览" name="preview">
-          <div class="w-full flex flex-col gap-3 px-4 py-2">
-            <div class="flex gap-1 items-center">
-              <Icon.FontSize width="14" height="14" />
-              字体大小
-            </div>
-            <vue-slider
-              v-model="previewSettingsStore.fontSize"
-              :min="12"
-              :max="20"
-            />
-            <div class="border-l w-full border" />
-          </div>
-        </el-tab-pane>
-        <el-tab-pane label="编辑器" name="editor">
-          <div class="w-full flex flex-col gap-3 px-4 py-2">
-            <div class="flex gap-1 items-center">
-              <Icon.FontSize width="14" height="14" />
-              字体大小
-            </div>
-            <vue-slider
-              v-model="editorSettingsStore.fontSize"
-              :min="10"
-              :max="20"
-            />
-            <div class="border-l w-full border" />
-            <div class="flex gap-1 items-center">
-              <Icon.WordWrap width="14" height="14" />
-              文字换行
-            </div>
-            <el-switch v-model="editorSettingsStore.wordWarp" />
-            <div class="border-l w-full border" />
-          </div>
-        </el-tab-pane>
-      </el-tabs>
-    </div>
-    <div class="w-10 h-full border-l border-dashed"></div>
-  </div> -->
+  <n-element class="container">
+    <n-tabs
+      type="line"
+      animated
+      size="small"
+      justify-content="center"
+    >
+      <n-tab-pane
+        name="preview"
+        tab="Preview"
+      >
+        预览
+      </n-tab-pane>
+      <n-tab-pane
+        name="editor"
+        tab="Editor"
+      >
+        编辑器
+      </n-tab-pane>
+    </n-tabs>
+    <div class=""></div>
+  </n-element>
 </template>
 
 <style scoped lang="scss">
 .container {
   background-color: var(--card-color);
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 </style>

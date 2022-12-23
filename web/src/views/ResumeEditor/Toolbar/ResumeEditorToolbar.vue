@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Icon } from "@components";
-import { useEditorSettingsStore, usePreviewSettingsStore } from "@stores";
+import { useEditorSettingsStore, usePreviewSettingsStore } from "@/store";
 
 const editorSettingsStore = useEditorSettingsStore();
 const previewSettingsStore = usePreviewSettingsStore();
 
-type TabType = "editor" | "preview";
+type Tab = "editor" | "preview";
 
-const activeTab = ref<TabType>("preview");
+const activeTab = ref<Tab>("preview");
 </script>
 
 <template>
