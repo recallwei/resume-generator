@@ -1,4 +1,3 @@
-import type { SiteMetaData } from "./site"
-import type { PreviewSettings } from "./editor"
-
-export type { SiteMetaData, PreviewSettings }
+export type { ThemeMode } from "./core"
+export type { PreviewSettings } from "./editor"
+export type { SiteMetaData } from "./site"

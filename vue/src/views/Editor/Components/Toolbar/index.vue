@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NElement } from "naive-ui"
 // import { ref } from "vue"
 // import { Icon } from "@components"
 // import { useEditorSettingsStore, usePreviewSettingsStore } from "@/stores"
@@ -12,7 +13,7 @@
 </script>
 
 <template>
-  <div></div>
+  <n-element class="container"></n-element>
   <!-- <div class="h-full flex">
     <div class="grow h-full flex flex-col gap-2 pr-1 text-sm">
       <el-tabs v-model="activeTab">
@@ -55,3 +56,10 @@
     <div class="w-10 h-full border-l border-dashed"></div>
   </div> -->
 </template>
+
+<style scoped lang="scss">
+.container {
+  background-color: var(--card-color);
+  min-height: 100%;
+}
+</style>

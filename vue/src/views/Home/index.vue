@@ -6,19 +6,25 @@ import { useSiteMetaData } from "@/hooks"
 const router = useRouter()
 const siteMetaData = useSiteMetaData()
 
-const APP_VERSION = "1.0.0"
-
 const navTo = (url: string) => router.push(url)
 </script>
 
 <template>
   <main class="container">
     <div class="content-wrapper">
-      <div>{{ siteMetaData.appName }}</div>
-      <div class="app-version">{{ APP_VERSION }}</div>
+      <div class="app-name">
+        {{ siteMetaData.appName }}
+      </div>
+      <div class="app-version">
+        {{ `v${siteMetaData.appVersion}` }}
+      </div>
       <div class="btn-group">
-        <n-button type="primary">Get Started</n-button>
-        <n-button @click="navTo('/editor')">Editor</n-button>
+        <n-button
+          type="primary"
+          @click="navTo('/editor')"
+        >
+          Get Started
+        </n-button>
         <n-button @click="navTo('/components')">Components Test</n-button>
       </div>
     </div>
@@ -26,6 +32,13 @@ const navTo = (url: string) => router.push(url)
 </template>
 
 <style scoped lang="scss">
+@mixin gradient-text {
+  background-image: linear-gradient(to right, #50c878, #c4b5fd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: pulse 2s linear infinite;
+}
 .container {
   height: 100vh;
   display: flex;
@@ -37,17 +50,29 @@ const navTo = (url: string) => router.push(url)
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   margin-bottom: 120px;
 }
+.app-name {
+  @include gradient-text;
+  font-weight: 600;
+  font-size: 44px;
+}
 .app-version {
+  @include gradient-text;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .btn-group {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.75;
+  }
 }
 </style>

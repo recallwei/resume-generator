@@ -1,33 +1,29 @@
 ## Advantage
 
-- One year Saas programing experience.
-- Deploy full stack application by self。
-- Have PaaS programing experience.
+- One year Saas and full-stack development programing experience.
+- Deploy full-stack application by self based on Next.js, React and PostgreSQL.
+- Have PaaS, Faas programing experience.
 
 ## Work
 
-- One year Saas programing experience.
-- Deploy full stack application by self。
-- Have PaaS programing experience.
+...
 
 ## Project
 
-- One year Saas programing experience.
-- Deploy full stack application by self。
-- Have PaaS programing experience.
+- Taskward: Full-stack application based on TS/React and PostgreSQL.
+- Resume Generator: A Vue 3/TS project.
+- Wiki: Personal blog website based on Docusaurus 2 with SSG(Static Site Generation).
 
 ## Education
 
-- One year Saas programing experience.
-- Deploy full stack application by self。
-- Have PaaS programing experience.
+- CS bachelor's degree.
 
 ## Personal Skill
 
-- One year Saas programing experience.
-- Deploy full stack application by self。
-- Have PaaS programing experience.
+- JavaScript, TypeScript, React, Vue, Next.js, PostgreSQL, Redis
 
 ## Language Skill
 
 - English: CET-6
+- Japanese: N1
+- Español: Basic

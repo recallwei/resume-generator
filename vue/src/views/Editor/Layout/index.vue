@@ -36,7 +36,7 @@ const editorStore = useEditorStore()
           min-size="12"
           max-size="15"
         >
-          <toolbar class="toolbar" />
+          <toolbar />
         </pane>
       </splitpanes>
     </n-layout-content>
@@ -56,9 +56,9 @@ const editorStore = useEditorStore()
 }
 .content {
   height: calc(100% - 48px);
-}
-.toolbar {
-  background-color: white;
-  min-height: 100%;
+  :deep(.splitpanes__splitter) {
+    background-color: var(--modal-color);
+    border-left: var(--border-color);
+  }
 }
 </style>

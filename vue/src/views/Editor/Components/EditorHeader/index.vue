@@ -1,18 +1,35 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router"
-import { GitHubButton } from "@/components"
-import { useEditorStore } from "@/store"
+import { NIcon } from "naive-ui"
+import {
+  CompressFilled as CompressIcon,
+  ExpandFilled as ExpandIcon,
+  LightModeOutlined as LightModeIcon,
+  DarkModeOutlined as darkModeIcon
+} from "@vicons/material"
+import { Github as GithubIcon } from "@vicons/fa"
+// import { GitHubButton } from "@/components"
+import { useEditorStore, useThemeStore } from "@/store"
 import { useSiteMetaData } from "@/hooks"
 import favicon from "/images/resume-generator.png"
 
 const router = useRouter()
 
 const editorStore = useEditorStore()
+const themeStore = useThemeStore()
 const siteMetaData = useSiteMetaData()
 
 const backToHome = () => router.push("/")
 
 const toggleExpand = () => editorStore.toggleToolbarState()
+
+const switchThemeMode = () => {
+  if (themeStore.theme === "dark") {
+    themeStore.switchThemeMode("light")
+  } else if (themeStore.theme === "light") {
+    themeStore.switchThemeMode("dark")
+  }
+}
 
 const goGitHubRepo = () => window.open(siteMetaData.repoUrl)
 </script>
@@ -24,47 +41,78 @@ const goGitHubRepo = () => window.open(siteMetaData.repoUrl)
       class="cursor-pointer"
       width="32"
       height="32"
-      @click="backToHome"
+      @click.prevent="backToHome"
     />
+    <span class="app-name">{{ siteMetaData.appName }}</span>
   </div>
   <div class="right-area-wrapper">
-    <git-hub-button @click="goGitHubRepo" />
-  </div>
-  <!-- <div class="flex items-center gap-4 px-2">
-    <img
-      :src="favicon"
+    <n-icon
+      size="24"
+      :depth="2"
+      class="rotate-icon"
+      @click.prevent="toggleExpand"
+    >
+      <expand-icon v-if="editorStore.toolbarCollapsed" />
+      <compress-icon v-else />
+    </n-icon>
+    <n-icon
+      size="22"
+      :depth="2"
       class="cursor-pointer"
-      width="36"
-      height="36"
-      @click="goHome"
+      @click.prevent="switchThemeMode"
+    >
+      <light-mode-icon v-if="themeStore.theme === 'light'" />
+      <dark-mode-icon v-if="themeStore.theme === 'dark'" />
+    </n-icon>
+    <n-icon
+      size="22"
+      :depth="2"
+      class="cursor-pointer"
+      @click.prevent="goGitHubRepo"
+    >
+      <github-icon />
+    </n-icon>
+
+    <!--
+    <git-hub-button
+      :width="24"
+      :height="24"
+      @click.prevent="goGitHubRepo"
     />
-    <label class="select-none"></label>
+    -->
   </div>
-  <div class="flex items-center gap-2">
+  <!--
     <div
       class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
       @click.prevent="toggleExpand"
     >
-      <Icon.Expand v-if="editorStore.toolbarCollapsed" />
-      <Icon.Collapse v-else class="cursor-pointer" />
     </div>
-    <Icon.GitHub class="cursor-pointer" :onClick="goGitHubRepo" />
-  </div> -->
+  -->
 </template>
 
 <style scoped lang="scss">
-.left-area-wrapper {
+@mixin area-wrapper($gap) {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 0 32px;
+  gap: $gap;
+}
+@mixin cursor-pointer {
+  cursor: pointer;
+}
+.left-area-wrapper {
+  @include area-wrapper(12px);
 }
 .right-area-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  @include area-wrapper(12px);
+}
+.app-name {
+  font-weight: 600;
+}
+.rotate-icon {
+  @include cursor-pointer;
+  transform: rotate(90deg);
 }
 .cursor-pointer {
-  cursor: pointer;
+  @include cursor-pointer;
 }
 </style>

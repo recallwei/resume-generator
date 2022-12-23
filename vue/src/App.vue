@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue"
 import { RouterView } from "vue-router"
 import {
   lightTheme,
@@ -9,15 +10,26 @@ import {
   zhCN,
   dateZhCN
 } from "naive-ui"
+import { useThemeStore } from "@/store"
 
 // 仅 DEV 模式下显示 Naive UI 主题编辑器
 const isDEV = import.meta.env.DEV
+
+const themeStore = useThemeStore()
+
+const getTheme = computed(() => {
+  if (themeStore.theme === "light") {
+    return lightTheme
+  } else if (themeStore.theme === "dark") {
+    return darkTheme
+  }
+})
 </script>
 
 <template>
   <n-config-provider
     class="container"
-    :theme="lightTheme || darkTheme"
+    :theme="getTheme"
     :locale="zhCN"
     :date-locale="dateZhCN"
   >

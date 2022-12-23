@@ -35,7 +35,9 @@ const backToHome = () => router.push("/")
           :width="200"
           class="magic-slider"
         />
-        <span>{{ "Current selected value: " + sliderValue }}</span>
+        <span>
+          {{ `Current selected value: ${sliderValue}` }}
+        </span>
       </section>
       <section>
         <div class="title">GitHub Button</div>
