@@ -2,6 +2,7 @@
 import { NElement, NTabs, NTabPane } from "naive-ui"
 import EditorTools from "./EditorTools"
 import PreviewTools from "./PreviewTools"
+import ShortcutMenu from "./ShortcutMenu"
 </script>
 
 <template>
@@ -11,7 +12,6 @@ import PreviewTools from "./PreviewTools"
       animated
       size="small"
       justify-content="center"
-      class="tabs"
     >
       <n-tab-pane
         name="editor"
@@ -26,7 +26,7 @@ import PreviewTools from "./PreviewTools"
         <preview-tools />
       </n-tab-pane>
     </n-tabs>
-    <n-element class="shortcut-menu"></n-element>
+    <shortcut-menu />
   </n-element>
 </template>
 
@@ -36,16 +36,6 @@ import PreviewTools from "./PreviewTools"
   min-height: 100%;
   display: flex;
   gap: 6px;
-  padding: 6px;
-}
-.tabs {
-  flex-shrink: 1;
-}
-.shortcut-menu {
-  width: 32px;
-  min-height: 100%;
-  border-left: 1px solid var(--custom-toolbar-border-color);
-  border-left-style: dashed;
-  flex-shrink: 0;
+  padding: 6px 0 6px 6px;
 }
 </style>
