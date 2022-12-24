@@ -3,7 +3,7 @@ import { ref } from "vue"
 import { useRouter } from "vue-router"
 import { NButton, NIcon } from "naive-ui"
 import { ArrowBackFilled as BackIcon } from "@vicons/material"
-import { MagicSlider, GitHubButton } from "@/components"
+import { GitHubButton } from "@/components"
 
 const router = useRouter()
 const sliderValue = ref(50)
@@ -28,17 +28,6 @@ const backToHome = () => router.push("/")
       </n-button>
     </div>
     <div class="group-wrapper">
-      <section class="section">
-        <div class="title">Magic Slider</div>
-        <magic-slider
-          v-model="sliderValue"
-          :width="200"
-          class="magic-slider"
-        />
-        <span>
-          {{ `Current selected value: ${sliderValue}` }}
-        </span>
-      </section>
       <section>
         <div class="title">GitHub Button</div>
         <git-hub-button />

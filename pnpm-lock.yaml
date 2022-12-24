@@ -35,6 +35,7 @@ specifiers:
   npm-run-all: ^4.1.5
   nprogress: 0.2.0
   pinia: ^2.0.28
+  postcss: ^8.4.20
   prettier: ^2.8.1
   sass: ^1.57.0
   splitpanes: ^3.1.5
@@ -49,7 +50,6 @@ specifiers:
   vitest: ^0.25.8
   vue: ^3.2.45
   vue-router: ^4.1.6
-  vue-slider-component: 4.1.0-beta.7
   vue-tsc: ^1.0.13
 
 dependencies:
@@ -64,7 +64,6 @@ dependencies:
   splitpanes: 3.1.5
   vue: 3.2.45
   vue-router: 4.1.6_vue@3.2.45
-  vue-slider-component: 4.1.0-beta.7
 
 devDependencies:
   '@commitlint/cli': 17.3.0
@@ -93,13 +92,14 @@ devDependencies:
   lint-staged: 13.1.0
   naive-ui: 2.34.2_vue@3.2.45
   npm-run-all: 4.1.5
+  postcss: 8.4.20
   prettier: 2.8.1
   sass: 1.57.0
   stylelint: 14.16.0
   stylelint-config-prettier: 9.0.4_stylelint@14.16.0
   stylelint-config-prettier-scss: 0.0.1_stylelint@14.16.0
   stylelint-config-standard: 29.0.0_stylelint@14.16.0
-  stylelint-config-standard-scss: 6.1.0_stylelint@14.16.0
+  stylelint-config-standard-scss: 6.1.0_l3s4qeu3gkar2knsdy3w5miimm
   typescript: 4.9.4
   vfonts: 0.0.3
   vite: 4.0.1_k6oqnztktp4dgazaq76kukrvtq
@@ -4017,11 +4017,13 @@ packages:
       postcss: 8.4.20
     dev: true
 
-  /postcss-scss/4.0.6:
+  /postcss-scss/4.0.6_postcss@8.4.20:
     resolution: {integrity: sha512-rLDPhJY4z/i4nVFZ27j9GqLxj1pwxE80eAzUNRMXtcpipFYIeowerzBgG3yJhMtObGEXidtIgbUpQ3eLDsf5OQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.4.19
+    dependencies:
+      postcss: 8.4.20
     dev: true
 
   /postcss-selector-parser/6.0.11:
@@ -4552,7 +4554,7 @@ packages:
       stylelint: 14.16.0
     dev: true
 
-  /stylelint-config-recommended-scss/8.0.0_stylelint@14.16.0:
+  /stylelint-config-recommended-scss/8.0.0_l3s4qeu3gkar2knsdy3w5miimm:
     resolution: {integrity: sha512-BxjxEzRaZoQb7Iinc3p92GS6zRdRAkIuEu2ZFLTxJK2e1AIcCb5B5MXY9KOXdGTnYFZ+KKx6R4Fv9zU6CtMYPQ==}
     peerDependencies:
       postcss: ^8.3.3
@@ -4561,7 +4563,8 @@ packages:
       postcss:
         optional: true
     dependencies:
-      postcss-scss: 4.0.6
+      postcss: 8.4.20
+      postcss-scss: 4.0.6_postcss@8.4.20
       stylelint: 14.16.0
       stylelint-config-recommended: 9.0.0_stylelint@14.16.0
       stylelint-scss: 4.3.0_stylelint@14.16.0
@@ -4575,7 +4578,7 @@ packages:
       stylelint: 14.16.0
     dev: true
 
-  /stylelint-config-standard-scss/6.1.0_stylelint@14.16.0:
+  /stylelint-config-standard-scss/6.1.0_l3s4qeu3gkar2knsdy3w5miimm:
     resolution: {integrity: sha512-iZ2B5kQT2G3rUzx+437cEpdcnFOQkwnwqXuY8Z0QUwIHQVE8mnYChGAquyKFUKZRZ0pRnrciARlPaR1RBtPb0Q==}
     peerDependencies:
       postcss: ^8.3.3
@@ -4584,8 +4587,9 @@ packages:
       postcss:
         optional: true
     dependencies:
+      postcss: 8.4.20
       stylelint: 14.16.0
-      stylelint-config-recommended-scss: 8.0.0_stylelint@14.16.0
+      stylelint-config-recommended-scss: 8.0.0_l3s4qeu3gkar2knsdy3w5miimm
       stylelint-config-standard: 29.0.0_stylelint@14.16.0
     dev: true
 
@@ -5090,10 +5094,6 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.4.5
       vue: 3.2.45
-    dev: false
-
-  /vue-slider-component/4.1.0-beta.7:
-    resolution: {integrity: sha512-Qb7K920ZG7PoQswoF6Ias+i3W2rd3k4fpk04JUl82kEUcN86Yg6et7bVSKWt/7VpQe8a5IT3BqCKSCOZ7AJgCA==}
     dev: false
 
   /vue-template-compiler/2.7.14:
