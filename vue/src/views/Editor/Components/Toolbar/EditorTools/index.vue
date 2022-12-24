@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { NIcon, NSwitch } from "naive-ui"
+import { NIcon, NSwitch, NSlider } from "naive-ui"
 import {
   TextFieldsOutlined as FontSizeIcon,
   WrapTextOutlined as WordWrapIcon
 } from "@vicons/material"
-import { MagicSlider } from "@/components"
-import { useEditorSettingsStore, usePreviewSettingsStore } from "@/store"
+import { useEditorSettingsStore } from "@/store"
+import { formatTooltipWithPx } from "@/utils"
 
 const editorSettingsStore = useEditorSettingsStore()
-const previewSettingsStore = usePreviewSettingsStore()
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="container">
     <div class="block">
       <div class="title-row">
         <n-icon
@@ -23,11 +22,17 @@ const previewSettingsStore = usePreviewSettingsStore()
         </n-icon>
         Font Size
       </div>
-      <magic-slider
-        v-model="editorSettingsStore.editorSettings.fontSize"
+      <n-slider
+        v-model:value="editorSettingsStore.editorSettings.fontSize"
         :min="12"
         :max="20"
+        :format-tooltip="formatTooltipWithPx"
       />
+      <div class="scale-text">
+        <span>12px</span>
+        <span>16px</span>
+        <span>20px</span>
+      </div>
       <div class="divider" />
     </div>
 
@@ -52,27 +57,20 @@ const previewSettingsStore = usePreviewSettingsStore()
 </template>
 
 <style scoped lang="scss">
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px 16px;
+@use "../index.module.scss" as *;
+.container {
+  @include container;
 }
 .block {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  @include block;
 }
 .divider {
-  width: 100%;
-  height: 1px;
-  margin: 2px 0;
-  background-color: var(--custom-toolbar-border-color);
+  @include divider;
 }
 .title-row {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  font-weight: 500;
+  @include title-row;
+}
+.scale-text {
+  @include scale-text;
 }
 </style>
