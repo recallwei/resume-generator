@@ -20,22 +20,22 @@ const editorStore = useEditorStore()
       <n-element class="splitpanes-wrapper">
         <splitpanes class="default-theme">
           <pane
-            max-size="54"
-            size="40"
+            max-size="58"
+            size="43"
           >
             <markdown-editor />
           </pane>
           <pane
             min-size="30"
-            size="40"
+            size="43"
           >
             <resume-preview />
           </pane>
           <pane
             v-if="!editorStore.toolbarCollapsed"
-            size="20"
-            min-size="16"
-            max-size="20"
+            size="14"
+            min-size="12"
+            max-size="16"
           >
             <toolbar />
           </pane>
@@ -48,6 +48,7 @@ const editorStore = useEditorStore()
 <style scoped lang="scss">
 .layout {
   height: 100vh;
+  margin: auto;
 }
 .header {
   height: 48px;

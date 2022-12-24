@@ -10,13 +10,12 @@ const previewSettingsStore = usePreviewSettingsStore()
 
 const markdown = MarkdownIt()
 
-const markdownRender = computed(() => markdown.render(editorStore.markdownContent))
-
 const previewContentRef = ref(null)
+const previewHeight = ref(1130)
 
 const { width } = useElementSize(previewContentRef)
 
-const previewHeight = ref(1130)
+const markdownRender = computed(() => markdown.render(editorStore.markdownContent))
 
 watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
 </script>
@@ -29,8 +28,8 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
       class="content"
       :style="{
         fontSize: `${previewSettingsStore.previewSettings.fontSize}px`,
-        height: `${previewHeight}px`,
-        transform: width === 800 ? 'scale(1,1)' : `scale(${width / 800},${previewHeight / 1130} )`
+        height: `${previewHeight}px`
+        // transform: width === 800 ? 'scale(1,1)' : `scale(${width / 800},${previewHeight / 1130} )`
       }"
     />
   </n-element>
@@ -42,7 +41,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
   -ms-overflow-style: none; /* IE 10+ */
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 16px;
+  padding: 4px;
   height: 100%;
   // background-color: var(--card-color);
   &::-webkit-scrollbar {
@@ -55,7 +54,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
   background-color: var(--modal-color);
   white-space: normal;
   word-break: break-word;
-  max-width: 800px;
+  max-width: 210mm;
   margin-left: auto;
   margin-right: auto;
   :deep(h1),
