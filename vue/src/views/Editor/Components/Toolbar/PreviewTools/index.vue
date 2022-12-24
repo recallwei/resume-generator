@@ -24,6 +24,7 @@ const previewSettingsStore = usePreviewSettingsStore()
         :min="12"
         :max="20"
         :format-tooltip="formatTooltipWithPx"
+        class="slider"
       />
       <div class="scale-text">
         <span>12px</span>
@@ -51,5 +52,8 @@ const previewSettingsStore = usePreviewSettingsStore()
 }
 .scale-text {
   @include scale-text;
+}
+.slider {
+  @include slider;
 }
 </style>

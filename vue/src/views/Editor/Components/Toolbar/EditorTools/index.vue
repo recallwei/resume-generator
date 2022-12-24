@@ -27,6 +27,7 @@ const editorSettingsStore = useEditorSettingsStore()
         :min="12"
         :max="20"
         :format-tooltip="formatTooltipWithPx"
+        class="slider"
       />
       <div class="scale-text">
         <span>12px</span>
@@ -45,12 +46,12 @@ const editorSettingsStore = useEditorSettingsStore()
           <word-wrap-icon />
         </n-icon>
         Word Wrap
+        <n-switch
+          v-model:value="editorSettingsStore.editorSettings.wordWarp"
+          size="small"
+          style="margin-left: 4px"
+        />
       </div>
-      <n-switch
-        v-model:value="editorSettingsStore.editorSettings.wordWarp"
-        size="small"
-        style="justify-content: flex-start"
-      />
       <div class="divider" />
     </div>
   </div>
@@ -72,5 +73,8 @@ const editorSettingsStore = useEditorSettingsStore()
 }
 .scale-text {
   @include scale-text;
+}
+.slider {
+  @include slider;
 }
 </style>

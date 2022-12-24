@@ -27,3 +27,6 @@
   align-items: center;
   font-size: smaller;
 }
+@mixin slider {
+  padding: 0 2px;
+}
