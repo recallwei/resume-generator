@@ -2,12 +2,20 @@
 import { NIcon, NElement } from "naive-ui"
 import {
   TextFieldsOutlined as FontSizeIcon,
-  WrapTextOutlined as WordWrapIcon
+  WrapTextOutlined as WordWrapIcon,
+  PaletteOutlined as ThemeColorIcon
 } from "@vicons/material"
 </script>
 
 <template>
   <n-element class="shortcut">
+    <n-icon
+      size="28"
+      :depth="2"
+      class="icon"
+    >
+      <theme-color-icon />
+    </n-icon>
     <n-icon
       size="28"
       :depth="2"

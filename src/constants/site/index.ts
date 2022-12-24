@@ -1,1 +1,0 @@
-export { siteMetaData } from "./meta"

@@ -6,6 +6,7 @@ import {
 } from "@vicons/material"
 import { useEditorSettingsStore } from "@/store"
 import { formatTooltipWithPx } from "@/utils"
+import LineDivider from "../LineDivider"
 
 const editorSettingsStore = useEditorSettingsStore()
 </script>
@@ -34,7 +35,7 @@ const editorSettingsStore = useEditorSettingsStore()
         <span>16px</span>
         <span>20px</span>
       </div>
-      <div class="divider" />
+      <line-divider />
     </div>
 
     <div class="block">
@@ -52,7 +53,7 @@ const editorSettingsStore = useEditorSettingsStore()
           style="margin-left: 4px"
         />
       </div>
-      <div class="divider" />
+      <line-divider />
     </div>
   </div>
 </template>
@@ -64,9 +65,6 @@ const editorSettingsStore = useEditorSettingsStore()
 }
 .block {
   @include block;
-}
-.divider {
-  @include divider;
 }
 .title-row {
   @include title-row;

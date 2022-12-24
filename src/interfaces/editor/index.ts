@@ -1,2 +1,2 @@
-export type { EditorSettings } from "./editorSettings"
-export type { PreviewSettings } from "./previewSettings"
+export * from "./editorSettings"
+export * from "./previewSettings"

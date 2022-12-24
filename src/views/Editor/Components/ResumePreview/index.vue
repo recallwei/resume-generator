@@ -64,6 +64,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
   :deep(h5),
   :deep(h6) {
     color: v-bind("previewSettingsStore.previewSettings.themeColor");
+    transition: color 0.5s ease;
     font-weight: bolder;
     font-size: larger;
   }
