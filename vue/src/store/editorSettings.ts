@@ -1,13 +1,16 @@
 import { ref } from "vue"
 import { defineStore } from "pinia"
+import type { EditorSettings } from "@/interfaces"
 
 export const useEditorSettingsStore = defineStore("editorSettings", () => {
-  const fontSize = ref<number>(13)
-  const wordWrap = ref<boolean>(true)
+  const editorSettings = ref<EditorSettings>({
+    fontSize: 13,
+    wordWarp: true
+  })
 
-  const changeFontSize = (value: number) => (fontSize.value = value)
+  const changeFontSize = (value: number) => (editorSettings.value.fontSize = value)
 
-  const toggleWordWrap = () => (wordWrap.value = !wordWrap.value)
+  const toggleWordWrap = () => (editorSettings.value.wordWarp = !editorSettings.value.wordWarp)
 
-  return { fontSize, wordWrap, changeFontSize, toggleWordWrap }
+  return { editorSettings, changeFontSize, toggleWordWrap }
 })

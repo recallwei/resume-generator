@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Splitpanes, Pane } from "splitpanes"
-import { NLayout, NLayoutHeader, NLayoutContent } from "naive-ui"
+import { NLayout, NLayoutHeader, NLayoutContent, NElement } from "naive-ui"
 import { useEditorStore } from "@/store"
 import { EditorHeader, MarkdownEditor, ResumePreview, Toolbar } from "../Components"
 import "splitpanes/dist/splitpanes.css"
@@ -17,28 +17,30 @@ const editorStore = useEditorStore()
       <editor-header />
     </n-layout-header>
     <n-layout-content class="content">
-      <splitpanes class="default-theme">
-        <pane
-          max-size="65"
-          size="44"
-        >
-          <markdown-editor />
-        </pane>
-        <pane
-          min-size="20"
-          size="44"
-        >
-          <resume-preview />
-        </pane>
-        <pane
-          v-if="!editorStore.toolbarCollapsed"
-          size="12"
-          min-size="12"
-          max-size="15"
-        >
-          <toolbar />
-        </pane>
-      </splitpanes>
+      <n-element class="splitpanes-wrapper">
+        <splitpanes class="default-theme">
+          <pane
+            max-size="54"
+            size="40"
+          >
+            <markdown-editor />
+          </pane>
+          <pane
+            min-size="30"
+            size="40"
+          >
+            <resume-preview />
+          </pane>
+          <pane
+            v-if="!editorStore.toolbarCollapsed"
+            size="20"
+            min-size="16"
+            max-size="20"
+          >
+            <toolbar />
+          </pane>
+        </splitpanes>
+      </n-element>
     </n-layout-content>
   </n-layout>
 </template>
@@ -56,9 +58,15 @@ const editorStore = useEditorStore()
 }
 .content {
   height: calc(100% - 48px);
+}
+.splitpanes-wrapper {
+  height: 100%;
   :deep(.splitpanes__splitter) {
-    background-color: var(--modal-color);
-    border-left: var(--border-color);
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    margin-right: -1px;
+    margin-left: -1px;
+    background-color: var(--custom-splitpanes-background-color);
   }
 }
 </style>

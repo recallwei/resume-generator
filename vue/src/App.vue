@@ -1,35 +1,21 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import { RouterView } from "vue-router"
-import {
-  lightTheme,
-  darkTheme,
-  NConfigProvider,
-  NGlobalStyle,
-  NThemeEditor,
-  zhCN,
-  dateZhCN
-} from "naive-ui"
-import { useThemeStore } from "@/store"
+import { NConfigProvider, NGlobalStyle, NThemeEditor, zhCN, dateZhCN } from "naive-ui"
+import { getTheme, getThemeOverrides, lightThemeOverrides, darkThemeOverrides } from "@/modules"
 
 // 仅 DEV 模式下显示 Naive UI 主题编辑器
 const isDEV = import.meta.env.DEV
 
-const themeStore = useThemeStore()
-
-const getTheme = computed(() => {
-  if (themeStore.theme === "light") {
-    return lightTheme
-  } else if (themeStore.theme === "dark") {
-    return darkTheme
-  }
-})
+const theme = computed(() => getTheme())
+const themeOverrides = computed(() => getThemeOverrides())
 </script>
 
 <template>
   <n-config-provider
     class="container"
-    :theme="getTheme"
+    :theme="theme"
+    :theme-overrides="themeOverrides"
     :locale="zhCN"
     :date-locale="dateZhCN"
   >
@@ -52,5 +38,14 @@ const getTheme = computed(() => {
 <style scoped lang="scss">
 .container {
   height: auto;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 300ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

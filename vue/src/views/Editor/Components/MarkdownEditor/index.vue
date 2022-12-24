@@ -30,7 +30,7 @@ onMounted(() => {
       automaticLayout: true,
       wordWrap: "on",
       tabSize: 2,
-      fontSize: editorSettingsStore.fontSize,
+      fontSize: editorSettingsStore.editorSettings.fontSize,
       theme: getVSCodeTheme()
     })
     editorStore.changeContent(test)
@@ -49,9 +49,9 @@ onUnmounted(() => {
 
 editorSettingsStore.$subscribe((_, state) => {
   toRaw(editorInstance.value)?.updateOptions({
-    fontSize: state.fontSize,
+    fontSize: state.editorSettings.fontSize,
     automaticLayout: true,
-    wordWrap: state.wordWrap ? "on" : "off",
+    wordWrap: state.editorSettings.wordWarp ? "on" : "off",
     tabSize: 2
   })
 })

@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue"
 import { NElement, NTabs, NTabPane } from "naive-ui"
-import { useEditorSettingsStore, usePreviewSettingsStore } from "@/store"
 import EditorTools from "./EditorTools"
 import PreviewTools from "./PreviewTools"
-
-const editorSettingsStore = useEditorSettingsStore()
-const previewSettingsStore = usePreviewSettingsStore()
 </script>
 
 <template>
@@ -16,6 +11,7 @@ const previewSettingsStore = usePreviewSettingsStore()
       animated
       size="small"
       justify-content="center"
+      class="tabs"
     >
       <n-tab-pane
         name="editor"
@@ -30,7 +26,7 @@ const previewSettingsStore = usePreviewSettingsStore()
         <preview-tools />
       </n-tab-pane>
     </n-tabs>
-    <div class="shortcut-menu"></div>
+    <n-element class="shortcut-menu"></n-element>
   </n-element>
 </template>
 
@@ -40,15 +36,16 @@ const previewSettingsStore = usePreviewSettingsStore()
   min-height: 100%;
   display: flex;
   gap: 6px;
-  padding-right: 6px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px;
+}
+.tabs {
+  flex-shrink: 1;
 }
 .shortcut-menu {
-  width: 30px;
+  width: 32px;
   min-height: 100%;
-  border-left-width: 1px solid var(--border-color);
+  border-left: 1px solid var(--custom-toolbar-border-color);
   border-left-style: dashed;
-  flex-grow: 1;
+  flex-shrink: 0;
 }
 </style>
