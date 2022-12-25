@@ -3,7 +3,6 @@ import { onMounted, onUnmounted, ref, toRaw } from "vue"
 import * as monaco from "monaco-editor"
 import { useEditorStore, useEditorSettingsStore, useThemeStore } from "@/store"
 import test from "@/assets/test.md?raw"
-import test2 from "@/assets/test_zhcn.md?raw"
 
 const editorRef = ref<HTMLElement | null>(null)
 const editorInstance = ref<monaco.editor.IStandaloneCodeEditor | null>(null)
