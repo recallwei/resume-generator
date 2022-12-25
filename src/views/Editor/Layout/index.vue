@@ -17,7 +17,7 @@ const editorStore = useEditorStore()
       <editor-header />
     </n-layout-header>
     <n-layout-content class="content">
-      <n-element class="splitpanes-wrapper">
+      <n-element class="n-element-splitpanes-wrapper">
         <splitpanes class="default-theme">
           <pane
             max-size="58"
@@ -60,7 +60,7 @@ const editorStore = useEditorStore()
 .content {
   height: calc(100% - 48px);
 }
-.splitpanes-wrapper {
+.n-element-splitpanes-wrapper {
   height: 100%;
   :deep(.splitpanes__splitter) {
     border-right: 1px solid #eee;

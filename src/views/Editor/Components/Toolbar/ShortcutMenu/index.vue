@@ -3,18 +3,26 @@ import { NIcon, NElement } from "naive-ui"
 import {
   TextFieldsOutlined as FontSizeIcon,
   WrapTextOutlined as WordWrapIcon,
-  PaletteOutlined as ThemeColorIcon
+  PaletteOutlined as ThemeColorIcon,
+  FormatColorFillOutlined as PaperColorIcon
 } from "@vicons/material"
 </script>
 
 <template>
-  <n-element class="shortcut">
+  <n-element class="n-element-shortcut-menu-container">
     <n-icon
       size="28"
       :depth="2"
       class="icon"
     >
       <theme-color-icon />
+    </n-icon>
+    <n-icon
+      size="28"
+      :depth="2"
+      class="icon"
+    >
+      <paper-color-icon />
     </n-icon>
     <n-icon
       size="28"
@@ -34,7 +42,7 @@ import {
 </template>
 
 <style scoped lang="scss">
-.shortcut {
+.n-element-shortcut-menu-container {
   width: 32px;
   min-height: 100%;
   border-left: 1px solid var(--custom-toolbar-border-color);

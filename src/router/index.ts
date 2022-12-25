@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: "/",
       name: "Home",
-      component: () => import("@/views/Home/index.vue"),
+      component: () => import("@/views/Home"),
       meta: {
         title: appName
       }
@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: "/editor",
       name: "Editor",
-      component: () => import("@/views/Editor/index.vue"),
+      component: () => import("@/views/Editor"),
       meta: {
         title: "Editor"
       }
@@ -25,15 +25,23 @@ const router = createRouter({
     {
       path: "/components",
       name: "Components",
-      component: () => import("@/views/Components/index.vue"),
+      component: () => import("@/views/Components"),
       meta: {
         title: "Components Test"
       }
     },
     {
+      path: "/test",
+      name: "Test",
+      component: () => import("@/views/Test"),
+      meta: {
+        title: "Test"
+      }
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
-      component: () => import("@/views/NotFound/index.vue"),
+      component: () => import("@/views/NotFound"),
       meta: {
         title: "Not Found"
       }
