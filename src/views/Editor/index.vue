@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import * as monaco from "monaco-editor"
 import Layout from "./Layout"
 import { useThemeStore, usePreviewSettingsStore } from "@/store"
 
@@ -8,7 +9,7 @@ const previewSettingsStore = usePreviewSettingsStore()
 // Automatic switch color between #000000 and #FFFFFF when the theme changed
 themeStore.$subscribe((mutation, state) => {
   if (mutation.storeId === "theme") {
-    // Theme Color
+    // Preview Theme Color
     if (
       state.theme === "light" &&
       previewSettingsStore.previewSettings.themeColor.toUpperCase() === "#FFFFFF"
@@ -20,7 +21,7 @@ themeStore.$subscribe((mutation, state) => {
     ) {
       previewSettingsStore.changeThemeColor("#FFFFFF")
     }
-    // Paper Color
+    // Preview Paper Color
     if (
       state.theme === "light" &&
       previewSettingsStore.previewSettings.paperColor.toUpperCase() === "#000000"
@@ -31,6 +32,14 @@ themeStore.$subscribe((mutation, state) => {
       previewSettingsStore.previewSettings.paperColor.toUpperCase() === "#FFFFFF"
     ) {
       previewSettingsStore.changePaperColor("#000000")
+    }
+    // Editor Theme
+    if (state.theme === "light") {
+      monaco.editor.setTheme("vs")
+    } else if (state.theme === "dark") {
+      monaco.editor.setTheme("vs-dark")
+    } else {
+      monaco.editor.setTheme("vs")
     }
   }
 })

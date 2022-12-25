@@ -28,10 +28,11 @@ onMounted(() => {
       value: test,
       language: "markdown",
       automaticLayout: true,
-      wordWrap: "on",
       tabSize: 2,
+      wordWrap: editorSettingsStore.editorSettings.wordWarp ? "on" : "off",
       fontSize: editorSettingsStore.editorSettings.fontSize,
-      theme: getVSCodeTheme()
+      theme: getVSCodeTheme(),
+      autoDetectHighContrast: editorSettingsStore.editorSettings.supportHighContrast
     })
     editorStore.changeContent(test)
     editorInstance.value.onDidChangeModelContent(() => {
@@ -50,23 +51,7 @@ onUnmounted(() => {
 editorSettingsStore.$subscribe((_, state) => {
   toRaw(editorInstance.value)?.updateOptions({
     fontSize: state.editorSettings.fontSize,
-    automaticLayout: true,
-    wordWrap: state.editorSettings.wordWarp ? "on" : "off",
-    tabSize: 2
-  })
-})
-
-themeStore.$subscribe((_, state) => {
-  let currentTheme
-  if (state.theme === "light") {
-    currentTheme = "vs"
-  } else if (state.theme === "dark") {
-    currentTheme = "vs-dark"
-  } else {
-    currentTheme = "vs"
-  }
-  toRaw(editorInstance.value)?.updateOptions({
-    theme: currentTheme
+    wordWrap: state.editorSettings.wordWarp ? "on" : "off"
   })
 })
 </script>

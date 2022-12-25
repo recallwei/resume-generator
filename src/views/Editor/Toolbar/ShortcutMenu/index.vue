@@ -4,39 +4,49 @@ import {
   TextFieldsOutlined as FontSizeIcon,
   WrapTextOutlined as WordWrapIcon,
   PaletteOutlined as ThemeColorIcon,
-  FormatColorFillOutlined as PaperColorIcon
+  FormatColorFillOutlined as PaperColorIcon,
+  ContrastOutlined as HighContrastIcon
 } from "@vicons/material"
 </script>
 
 <template>
   <n-element class="shortcut-menu-container">
     <n-icon
-      size="28"
+      size="20"
       :depth="2"
       class="icon"
     >
       <theme-color-icon />
     </n-icon>
     <n-icon
-      size="28"
+      size="20"
       :depth="2"
       class="icon"
     >
       <paper-color-icon />
     </n-icon>
     <n-icon
-      size="28"
+      size="20"
       :depth="2"
       class="icon"
+      :style="{ marginBottom: '-5px' }"
     >
       <font-size-icon />
     </n-icon>
     <n-icon
-      size="28"
+      size="20"
       :depth="2"
       class="icon"
     >
       <word-wrap-icon />
+    </n-icon>
+    <n-icon
+      size="20"
+      :depth="2"
+      class="icon"
+      :style="{ marginTop: '-4px' }"
+    >
+      <high-contrast-icon />
     </n-icon>
   </n-element>
 </template>
@@ -52,10 +62,9 @@ import {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  padding: 0 8px;
+  gap: 12px;
+  padding: 0 4px;
   .icon {
-    padding: 4px;
     display: flex;
     justify-content: center;
     align-items: center;

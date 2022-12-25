@@ -2,6 +2,7 @@
 import { LineDivider } from "@/components"
 import FontSize from "./FontSize"
 import WordWrap from "./WordWrap"
+import SupportHighContrast from "./SupportHighContrast"
 </script>
 
 <template>
@@ -9,6 +10,8 @@ import WordWrap from "./WordWrap"
     <font-size />
     <line-divider />
     <word-wrap />
+    <line-divider />
+    <support-high-contrast />
     <line-divider />
   </div>
 </template>

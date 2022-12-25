@@ -9,17 +9,18 @@ const editorSettingsStore = useEditorSettingsStore()
 <template>
   <div class="block">
     <div class="title-row">
-      <n-icon
-        size="20"
-        :depth="2"
-      >
-        <word-wrap-icon />
-      </n-icon>
-      Word Wrap
+      <div>
+        <n-icon
+          size="20"
+          :depth="2"
+        >
+          <word-wrap-icon />
+        </n-icon>
+        Word Wrap
+      </div>
       <n-switch
         v-model:value="editorSettingsStore.editorSettings.wordWarp"
         size="small"
-        style="margin-left: 4px"
       />
     </div>
   </div>
@@ -32,5 +33,11 @@ const editorSettingsStore = useEditorSettingsStore()
 }
 .title-row {
   @include title-row;
+  justify-content: space-between;
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 }
 </style>

@@ -2,7 +2,7 @@
 import { Splitpanes, Pane } from "splitpanes"
 import { NLayout, NLayoutHeader, NLayoutContent, NElement } from "naive-ui"
 import { useEditorStore } from "@/store"
-import EditorHeader from "../EditorHeader"
+import LayoutHeader from "../LayoutHeader"
 import MarkdownEditor from "../MarkdownEditor"
 import ResumePreview from "../ResumePreview"
 import Toolbar from "../Toolbar"
@@ -17,26 +17,26 @@ const editorStore = useEditorStore()
       class="header-wrapper"
       bordered
     >
-      <editor-header />
+      <layout-header />
     </n-layout-header>
     <n-layout-content class="content-wrapper">
       <n-element class="splitpanes-wrapper">
         <splitpanes class="default-theme">
           <pane
             max-size="58"
-            size="43"
+            size="42"
           >
             <markdown-editor />
           </pane>
           <pane
             min-size="30"
-            size="43"
+            size="42"
           >
             <resume-preview />
           </pane>
           <pane
             v-if="!editorStore.toolbarCollapsed"
-            size="14"
+            size="16"
             min-size="12"
             max-size="16"
           >
