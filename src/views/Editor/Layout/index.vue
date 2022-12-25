@@ -2,7 +2,10 @@
 import { Splitpanes, Pane } from "splitpanes"
 import { NLayout, NLayoutHeader, NLayoutContent, NElement } from "naive-ui"
 import { useEditorStore } from "@/store"
-import { EditorHeader, MarkdownEditor, ResumePreview, Toolbar } from "../Components"
+import EditorHeader from "../EditorHeader"
+import MarkdownEditor from "../MarkdownEditor"
+import ResumePreview from "../ResumePreview"
+import Toolbar from "../Toolbar"
 import "splitpanes/dist/splitpanes.css"
 
 const editorStore = useEditorStore()
