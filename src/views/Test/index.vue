@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NEl } from "naive-ui"
+import { NElement } from "naive-ui"
 import ChildComponent from "./ChildComponent"
 </script>
 
