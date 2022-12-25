@@ -1,1 +1,1 @@
-export type { ThemeMode } from "./theme"
+export * from "./theme"

@@ -7,6 +7,8 @@ const router = useRouter()
 const siteMetaData = useSiteMetaData()
 
 const navTo = (url: string) => router.push(url)
+
+const isDEV = import.meta.env.DEV
 </script>
 
 <template>
@@ -25,7 +27,12 @@ const navTo = (url: string) => router.push(url)
         >
           Get Started
         </n-button>
-        <n-button @click="navTo('/components')">Components Test</n-button>
+        <n-button
+          v-if="isDEV"
+          @click="navTo('/components')"
+        >
+          Components Test
+        </n-button>
       </div>
     </div>
   </main>

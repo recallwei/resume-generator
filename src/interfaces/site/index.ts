@@ -1,1 +1,1 @@
-export type { SiteMetaData } from "./meta"
+export * from "./meta"

@@ -1,38 +1,18 @@
 <script setup lang="ts">
-import { NIcon, NSlider } from "naive-ui"
-import { TextFieldsOutlined as FontSizeIcon } from "@vicons/material"
-import { usePreviewSettingsStore } from "@/store"
-import { formatTooltipWithPx } from "@/utils"
-
-const previewSettingsStore = usePreviewSettingsStore()
+import { LineDivider } from "@/components"
+import ThemeColor from "./ThemeColor"
+import PaperColor from "./PaperColor"
+import FontSize from "./FontSize"
 </script>
 
 <template>
   <div class="container">
-    <div class="block">
-      <div class="title-row">
-        <n-icon
-          size="20"
-          :depth="2"
-        >
-          <font-size-icon />
-        </n-icon>
-        Font Size
-      </div>
-      <n-slider
-        v-model:value="previewSettingsStore.previewSettings.fontSize"
-        :min="12"
-        :max="20"
-        :format-tooltip="formatTooltipWithPx"
-        class="slider"
-      />
-      <div class="scale-text">
-        <span>12px</span>
-        <span>16px</span>
-        <span>20px</span>
-      </div>
-      <div class="divider" />
-    </div>
+    <theme-color />
+    <line-divider />
+    <paper-color />
+    <line-divider />
+    <font-size />
+    <line-divider />
   </div>
 </template>
 
@@ -40,20 +20,5 @@ const previewSettingsStore = usePreviewSettingsStore()
 @use "../index.module.scss" as *;
 .container {
   @include container;
-}
-.block {
-  @include block;
-}
-.divider {
-  @include divider;
-}
-.title-row {
-  @include title-row;
-}
-.scale-text {
-  @include scale-text;
-}
-.slider {
-  @include slider;
 }
 </style>
