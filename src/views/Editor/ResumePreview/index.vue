@@ -21,11 +21,11 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
 </script>
 
 <template>
-  <n-element class="n-element-resume-preview-container">
+  <n-element class="resume-preview-container">
     <n-element
       ref="previewContentRef"
       v-html="markdownRender"
-      class="n-element-resume-preview-content"
+      class="resume-preview-content"
       :style="{
         fontSize: `${previewSettingsStore.previewSettings.fontSize}px`,
         height: `${previewHeight}px`,
@@ -37,7 +37,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
 </template>
 
 <style scoped lang="scss">
-.n-element-resume-preview-container {
+.resume-preview-container {
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
   overflow-x: hidden;
@@ -49,7 +49,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
     display: none; /* Chrome Safari */
   }
 }
-.n-element-resume-preview-content {
+.resume-preview-content {
   border: 1px solid black;
   padding: 24px;
   white-space: normal;

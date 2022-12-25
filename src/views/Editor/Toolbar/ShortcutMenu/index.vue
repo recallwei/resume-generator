@@ -9,7 +9,7 @@ import {
 </script>
 
 <template>
-  <n-element class="n-element-shortcut-menu-container">
+  <n-element class="shortcut-menu-container">
     <n-icon
       size="28"
       :depth="2"
@@ -42,7 +42,7 @@ import {
 </template>
 
 <style scoped lang="scss">
-.n-element-shortcut-menu-container {
+.shortcut-menu-container {
   width: 32px;
   min-height: 100%;
   border-left: 1px solid var(--custom-toolbar-border-color);

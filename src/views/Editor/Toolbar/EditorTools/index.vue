@@ -5,7 +5,7 @@ import WordWrap from "./WordWrap"
 </script>
 
 <template>
-  <div class="container">
+  <div class="editor-tools-container">
     <font-size />
     <line-divider />
     <word-wrap />
@@ -15,7 +15,7 @@ import WordWrap from "./WordWrap"
 
 <style scoped lang="scss">
 @use "../index.module.scss" as *;
-.container {
+.editor-tools-container {
   @include container;
 }
 </style>

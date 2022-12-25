@@ -12,15 +12,15 @@ const editorStore = useEditorStore()
 </script>
 
 <template>
-  <n-layout class="layout">
+  <n-layout class="editor-layout">
     <n-layout-header
+      class="header-wrapper"
       bordered
-      class="header"
     >
       <editor-header />
     </n-layout-header>
-    <n-layout-content class="content">
-      <n-element class="n-element-splitpanes-wrapper">
+    <n-layout-content class="content-wrapper">
+      <n-element class="splitpanes-wrapper">
         <splitpanes class="default-theme">
           <pane
             max-size="58"
@@ -49,21 +49,20 @@ const editorStore = useEditorStore()
 </template>
 
 <style scoped lang="scss">
-.layout {
+.editor-layout {
   height: 100vh;
-  margin: auto;
 }
-.header {
+.header-wrapper {
   height: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
-.content {
+.content-wrapper {
   height: calc(100% - 48px);
 }
-.n-element-splitpanes-wrapper {
+.splitpanes-wrapper {
   height: 100%;
   :deep(.splitpanes__splitter) {
     border-right: 1px solid #eee;

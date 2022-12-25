@@ -12,7 +12,7 @@ const isDEV = import.meta.env.DEV
 </script>
 
 <template>
-  <main class="container">
+  <main class="home-page-container">
     <div class="content-wrapper">
       <div class="app-name">
         {{ siteMetaData.appName }}
@@ -46,7 +46,7 @@ const isDEV = import.meta.env.DEV
   color: transparent;
   animation: pulse 2s linear infinite;
 }
-.container {
+.home-page-container {
   height: 100vh;
   display: flex;
   justify-content: center;

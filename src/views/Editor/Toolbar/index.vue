@@ -6,7 +6,7 @@ import ShortcutMenu from "./ShortcutMenu"
 </script>
 
 <template>
-  <n-element class="n-element-toolbar-container">
+  <n-element class="toolbar-container">
     <n-tabs
       type="line"
       animated
@@ -31,7 +31,7 @@ import ShortcutMenu from "./ShortcutMenu"
 </template>
 
 <style scoped lang="scss">
-.n-element-toolbar-container {
+.toolbar-container {
   background-color: var(--card-color);
   min-height: 100%;
   display: flex;

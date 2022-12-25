@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { ref } from "vue"
 import { useRouter } from "vue-router"
 import { NButton, NIcon } from "naive-ui"
 import { ArrowBackFilled as BackIcon } from "@vicons/material"
 import { GitHubButton } from "@/components"
 
 const router = useRouter()
-const sliderValue = ref(50)
 
 const backToHome = () => router.push("/")
 </script>
 
 <template>
-  <div class="container">
+  <div class="components-page-container">
     <div class="top-area">
       <div class="page-title">Components Test Page</div>
       <n-button
@@ -37,7 +35,7 @@ const backToHome = () => router.push("/")
 </template>
 
 <style scoped lang="scss">
-.container {
+.components-page-container {
   max-width: 1600px;
   margin: auto;
   padding: 40px;
@@ -64,8 +62,5 @@ const backToHome = () => router.push("/")
   .page-title {
     font-weight: bold;
   }
-}
-.magic-slider {
-  margin: 10px 0;
 }
 </style>

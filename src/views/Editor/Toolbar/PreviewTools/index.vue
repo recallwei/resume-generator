@@ -6,7 +6,7 @@ import FontSize from "./FontSize"
 </script>
 
 <template>
-  <div class="container">
+  <div class="preview-tools-container">
     <theme-color />
     <line-divider />
     <paper-color />
@@ -18,7 +18,7 @@ import FontSize from "./FontSize"
 
 <style scoped lang="scss">
 @use "../index.module.scss" as *;
-.container {
+.preview-tools-container {
   @include container;
 }
 </style>

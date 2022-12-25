@@ -8,13 +8,11 @@ import {
   DarkModeOutlined as darkModeIcon
 } from "@vicons/material"
 import { Github as GithubIcon } from "@vicons/fa"
-// import { GitHubButton } from "@/components"
 import { useEditorStore, useThemeStore } from "@/store"
 import { useSiteMetaData } from "@/hooks"
 import favicon from "/images/resume-generator.png"
 
 const router = useRouter()
-
 const editorStore = useEditorStore()
 const themeStore = useThemeStore()
 const siteMetaData = useSiteMetaData()
@@ -72,22 +70,7 @@ const goGitHubRepo = () => window.open(siteMetaData.repoUrl)
     >
       <github-icon />
     </n-icon>
-
-    <!--
-    <git-hub-button
-      :width="24"
-      :height="24"
-      @click.prevent="goGitHubRepo"
-    />
-    -->
   </div>
-  <!--
-    <div
-      class="hover:bg-gray-200 active:bg-gray-100 rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
-      @click.prevent="toggleExpand"
-    >
-    </div>
-  -->
 </template>
 
 <style scoped lang="scss">

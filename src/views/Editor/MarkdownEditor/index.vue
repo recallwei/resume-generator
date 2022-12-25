@@ -74,12 +74,12 @@ themeStore.$subscribe((_, state) => {
 <template>
   <div
     ref="editorRef"
-    class="editor"
+    class="markdown-editor"
   />
 </template>
 
 <style scoped lang="scss">
-.editor {
+.markdown-editor {
   height: 100%;
 }
 </style>
