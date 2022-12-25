@@ -23,22 +23,22 @@ const editorStore = useEditorStore()
       <n-element class="splitpanes-wrapper">
         <splitpanes class="default-theme">
           <pane
-            max-size="58"
+            max-size="70"
             size="42"
           >
             <markdown-editor />
           </pane>
           <pane
-            min-size="30"
-            size="42"
+            min-size="14"
+            size="40"
           >
             <resume-preview />
           </pane>
           <pane
             v-if="!editorStore.toolbarCollapsed"
-            size="16"
-            min-size="12"
-            max-size="16"
+            size="18"
+            min-size="16"
+            max-size="20"
           >
             <toolbar />
           </pane>
