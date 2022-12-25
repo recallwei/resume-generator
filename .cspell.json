@@ -12,7 +12,10 @@
     }
   ],
   "ignorePaths": [
+    "./dist",
     "src/main.ts",
+    "public/*",
+    "src/assets/*",
     "node_modules",
     "package.json",
     ".cspell.json",

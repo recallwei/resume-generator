@@ -3,22 +3,15 @@ require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
   root: true,
-  env: {
-    parser: "@typescript-eslint/parser",
-    browser: true,
-    node: true,
-    es2021: true
+  parserOptions: {
+    ecmaVersion: "latest"
   },
-  globals: {},
   extends: [
     "plugin:vue/vue3-recommended",
     "@vue/eslint-config-typescript",
     "airbnb-base",
     "@vue/eslint-config-prettier"
   ],
-  parserOptions: {
-    ecmaVersion: "latest"
-  },
   rules: {
     quotes: ["error", "double"],
     semi: ["error", "never"],
@@ -27,13 +20,9 @@ module.exports = {
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "import/extensions": "off",
     "import/prefer-default-export": "off",
-    "import/newline-after-import": "off"
-  },
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
-      }
-    }
+    "import/newline-after-import": "off",
+    "import/no-absolute-path": "off", // import ./public
+    "import/no-unresolved": "off",
+    "no-unused-vars": "off" // use @typescript-eslint/no-unused-vars to check. (warnng level)
   }
 }
