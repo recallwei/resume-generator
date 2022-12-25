@@ -4,8 +4,10 @@ import ChildComponent from "./ChildComponent"
 </script>
 
 <template>
-  <n-element class="container">
-    <ChildComponent />
+  <n-element>
+    <div class="c">
+      <ChildComponent />
+    </div>
   </n-element>
 </template>
 
@@ -14,5 +16,8 @@ import ChildComponent from "./ChildComponent"
   background-color: green;
   width: 500px;
   height: 500px;
+}
+.c {
+  text-align: center;
 }
 </style>

@@ -41,7 +41,7 @@ const themeOverrides = computed(() => getThemeOverrides())
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 300ms ease;
+  transition: opacity 0.3s ease;
 }
 
 .fade-enter-from,

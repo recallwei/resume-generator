@@ -1,24 +1,21 @@
 <script setup lang="ts">
 import { LineDivider } from "@/components"
-import ThemeColor from "./ThemeColor"
-import PaperColor from "./PaperColor"
 import FontSize from "./FontSize"
+import WordWrap from "./WordWrap"
 </script>
 
 <template>
-  <div class="container">
-    <theme-color />
-    <line-divider />
-    <paper-color />
-    <line-divider />
+  <div class="editor-tools-container">
     <font-size />
+    <line-divider />
+    <word-wrap />
     <line-divider />
   </div>
 </template>
 
 <style scoped lang="scss">
 @use "../index.module.scss" as *;
-.container {
+.editor-tools-container {
   @include container;
 }
 </style>

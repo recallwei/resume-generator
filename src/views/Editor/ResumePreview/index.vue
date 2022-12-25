@@ -21,14 +21,15 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
 </script>
 
 <template>
-  <n-element class="n-element-resume-preview-container">
+  <n-element class="resume-preview-container">
     <n-element
       ref="previewContentRef"
       v-html="markdownRender"
-      class="n-element-resume-preview-content"
+      class="resume-preview-content"
       :style="{
         fontSize: `${previewSettingsStore.previewSettings.fontSize}px`,
-        height: `${previewHeight}px`
+        height: `${previewHeight}px`,
+        backgroundColor: `${previewSettingsStore.previewSettings.paperColor}`
         // transform: width === 800 ? 'scale(1,1)' : `scale(${width / 800},${previewHeight / 1130} )`
       }"
     />
@@ -36,7 +37,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
 </template>
 
 <style scoped lang="scss">
-.n-element-resume-preview-container {
+.resume-preview-container {
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
   overflow-x: hidden;
@@ -48,15 +49,15 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
     display: none; /* Chrome Safari */
   }
 }
-.n-element-resume-preview-content {
+.resume-preview-content {
   border: 1px solid black;
   padding: 24px;
-  background-color: var(--modal-color);
   white-space: normal;
   word-break: break-word;
   max-width: 210mm;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 0.3s ease, font-size 0.5s ease;
   :deep(h1),
   :deep(h2),
   :deep(h3),
@@ -64,7 +65,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
   :deep(h5),
   :deep(h6) {
     color: v-bind("previewSettingsStore.previewSettings.themeColor");
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
     font-weight: bolder;
     font-size: larger;
   }
