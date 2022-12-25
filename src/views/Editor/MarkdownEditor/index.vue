@@ -15,11 +15,11 @@ const themeStore = useThemeStore()
 const getVSCodeTheme = () => {
   if (themeStore.theme === "light") {
     return "vs"
-  } else if (themeStore.theme === "dark") {
-    return "vs-dark"
-  } else {
-    return "vs"
   }
+  if (themeStore.theme === "dark") {
+    return "vs-dark"
+  }
+  return "vs"
 }
 
 onMounted(() => {

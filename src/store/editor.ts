@@ -5,9 +5,13 @@ export const useEditorStore = defineStore("editor", () => {
   const toolbarCollapsed = ref<boolean>(false)
   const markdownContent = ref<string>("")
 
-  const toggleToolbarState = () => (toolbarCollapsed.value = !toolbarCollapsed.value)
+  const toggleToolbarState = () => {
+    toolbarCollapsed.value = !toolbarCollapsed.value
+  }
 
-  const changeContent = (content: string) => (markdownContent.value = content)
+  const changeContent = (content: string) => {
+    markdownContent.value = content
+  }
 
   return {
     toolbarCollapsed,

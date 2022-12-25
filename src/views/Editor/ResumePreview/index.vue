@@ -17,14 +17,16 @@ const { width } = useElementSize(previewContentRef)
 
 const markdownRender = computed(() => markdown.render(editorStore.markdownContent))
 
-watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
+watch(width, () => {
+  previewHeight.value = width.value * Math.sqrt(2)
+})
 </script>
 
+<!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
 <template>
   <n-element class="resume-preview-container">
     <n-element
       ref="previewContentRef"
-      v-html="markdownRender"
       class="resume-preview-content"
       :style="{
         fontSize: `${previewSettingsStore.previewSettings.fontSize}px`,
@@ -32,6 +34,7 @@ watch(width, () => (previewHeight.value = width.value * Math.sqrt(2)))
         backgroundColor: `${previewSettingsStore.previewSettings.paperColor}`
         // transform: width === 800 ? 'scale(1,1)' : `scale(${width / 800},${previewHeight / 1130} )`
       }"
+      v-html="markdownRender"
     />
   </n-element>
 </template>

@@ -9,12 +9,17 @@ export const useEditorSettingsStore = defineStore("editorSettings", () => {
     supportHighContrast: false
   })
 
-  const changeFontSize = (value: number) => (editorSettings.value.fontSize = value)
+  const changeFontSize = (value: number) => {
+    editorSettings.value.fontSize = value
+  }
 
-  const toggleWordWrap = () => (editorSettings.value.wordWarp = !editorSettings.value.wordWarp)
+  const toggleWordWrap = () => {
+    editorSettings.value.wordWarp = !editorSettings.value.wordWarp
+  }
 
-  const toggleSupportHighContrast = () =>
-    (editorSettings.value.supportHighContrast = !editorSettings.value.supportHighContrast)
+  const toggleSupportHighContrast = () => {
+    editorSettings.value.supportHighContrast = !editorSettings.value.supportHighContrast
+  }
 
   return { editorSettings, changeFontSize, toggleWordWrap, toggleSupportHighContrast }
 })

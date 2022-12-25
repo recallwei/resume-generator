@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, Transition } from "vue"
+import { computed } from "vue"
 import { NIcon, NColorPicker } from "naive-ui"
 import {
   FormatColorFillOutlined as PaperColorIcon,
@@ -14,21 +14,21 @@ const previewSettingsStore = usePreviewSettingsStore()
 const themeColorCandidates = computed(() => {
   if (themeStore.theme === "light") {
     return lightPaperColorCandidates
-  } else if (themeStore.theme === "dark") {
-    return darkPaperColorCandidates
-  } else {
-    return lightPaperColorCandidates
   }
+  if (themeStore.theme === "dark") {
+    return darkPaperColorCandidates
+  }
+  return lightPaperColorCandidates
 })
 
 const themeBoxShadow = computed(() => {
   if (themeStore.theme === "light") {
     return "light-theme-box-shadow"
-  } else if (themeStore.theme === "dark") {
-    return "dark-theme-box-shadow"
-  } else {
-    return "light-theme-box-shadow"
   }
+  if (themeStore.theme === "dark") {
+    return "dark-theme-box-shadow"
+  }
+  return "light-theme-box-shadow"
 })
 </script>
 

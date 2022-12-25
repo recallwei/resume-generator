@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, Transition } from "vue"
+import { computed } from "vue"
 import { NIcon, NColorPicker } from "naive-ui"
 import { PaletteOutlined as ThemeColorIcon, CheckFilled as CheckIcon } from "@vicons/material"
 import { useThemeStore, usePreviewSettingsStore } from "@/store"
@@ -11,21 +11,21 @@ const previewSettingsStore = usePreviewSettingsStore()
 const themeColorCandidates = computed(() => {
   if (themeStore.theme === "light") {
     return lightThemeColorCandidates
-  } else if (themeStore.theme === "dark") {
-    return darkThemeColorCandidates
-  } else {
-    return lightThemeColorCandidates
   }
+  if (themeStore.theme === "dark") {
+    return darkThemeColorCandidates
+  }
+  return lightThemeColorCandidates
 })
 
 const themeBoxShadow = computed(() => {
   if (themeStore.theme === "light") {
     return "light-theme-box-shadow"
-  } else if (themeStore.theme === "dark") {
-    return "dark-theme-box-shadow"
-  } else {
-    return "light-theme-box-shadow"
   }
+  if (themeStore.theme === "dark") {
+    return "dark-theme-box-shadow"
+  }
+  return "light-theme-box-shadow"
 })
 </script>
 

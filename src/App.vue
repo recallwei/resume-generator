@@ -2,7 +2,7 @@
 import { computed } from "vue"
 import { RouterView } from "vue-router"
 import { NConfigProvider, NGlobalStyle, NThemeEditor, zhCN, dateZhCN } from "naive-ui"
-import { getTheme, getThemeOverrides, lightThemeOverrides, darkThemeOverrides } from "@/modules"
+import { getTheme, getThemeOverrides } from "@/modules"
 
 // 仅 DEV 模式下显示 Naive UI 主题编辑器
 const isDEV = import.meta.env.DEV
