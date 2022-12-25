@@ -1,37 +1,33 @@
 <script setup lang="ts">
 import { computed, Transition } from "vue"
 import { NIcon, NColorPicker } from "naive-ui"
-import { PaletteOutlined as ThemeColorIcon, CheckFilled as CheckIcon } from "@vicons/material"
+import {
+  FormatColorFillOutlined as PaperColorIcon,
+  CheckFilled as CheckIcon
+} from "@vicons/material"
 import { useThemeStore, usePreviewSettingsStore } from "@/store"
-import { lightThemeColorCandidates, darkThemeColorCandidates } from "@/constants"
+import { lightPaperColorCandidates, darkPaperColorCandidates } from "@/constants"
 
 const themeStore = useThemeStore()
 const previewSettingsStore = usePreviewSettingsStore()
 
 const themeColorCandidates = computed(() => {
   if (themeStore.theme === "light") {
-    return lightThemeColorCandidates
+    return lightPaperColorCandidates
   } else if (themeStore.theme === "dark") {
-    return darkThemeColorCandidates
+    return darkPaperColorCandidates
   } else {
-    return lightThemeColorCandidates
+    return lightPaperColorCandidates
   }
 })
 
-// Automatic switch color between #000000 and #FFFFFF when the theme changed
-themeStore.$subscribe((mutation, state) => {
-  if (mutation.storeId === "theme") {
-    if (
-      state.theme === "light" &&
-      previewSettingsStore.previewSettings.themeColor.toUpperCase() === "#FFFFFF"
-    ) {
-      previewSettingsStore.changeThemeColor("#000000")
-    } else if (
-      state.theme === "dark" &&
-      previewSettingsStore.previewSettings.themeColor.toUpperCase() === "#000000"
-    ) {
-      previewSettingsStore.changeThemeColor("#FFFFFF")
-    }
+const themeBoxShadow = computed(() => {
+  if (themeStore.theme === "light") {
+    return "light-theme-box-shadow"
+  } else if (themeStore.theme === "dark") {
+    return "dark-theme-box-shadow"
+  } else {
+    return "light-theme-box-shadow"
   }
 })
 </script>
@@ -43,9 +39,9 @@ themeStore.$subscribe((mutation, state) => {
         size="20"
         :depth="2"
       >
-        <theme-color-icon />
+        <paper-color-icon />
       </n-icon>
-      Theme Color
+      Paper Color
     </div>
     <div class="scale-text">
       <div
@@ -53,11 +49,12 @@ themeStore.$subscribe((mutation, state) => {
         :key="index"
         :style="{ backgroundColor: color }"
         class="color-block"
-        @click="previewSettingsStore.changeThemeColor(color)"
+        :class="themeBoxShadow"
+        @click="previewSettingsStore.changePaperColor(color)"
       >
         <transition name="check">
           <n-icon
-            v-if="previewSettingsStore.previewSettings.themeColor.toUpperCase() === color"
+            v-if="previewSettingsStore.previewSettings.paperColor.toUpperCase() === color"
             size="18"
             :color="color === '#FFFFFF' ? '#000' : '#fff'"
           >
@@ -67,11 +64,11 @@ themeStore.$subscribe((mutation, state) => {
       </div>
     </div>
     <n-color-picker
-      :value="previewSettingsStore.previewSettings.themeColor"
+      :value="previewSettingsStore.previewSettings.paperColor"
       :modes="['hex']"
       :show-alpha="false"
       :swatches="themeColorCandidates"
-      :on-update:value="previewSettingsStore.changeThemeColor"
+      :on-update:value="previewSettingsStore.changePaperColor"
     />
   </div>
 </template>
@@ -100,10 +97,17 @@ themeStore.$subscribe((mutation, state) => {
     opacity: 0.5;
   }
 }
-
+.light-theme-box-shadow {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 1px 0.5px rgb(0 0 0 / 0.15);
+}
+.dark-theme-box-shadow {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 1px 0.5px rgb(255 255 255 / 0.45);
+}
 .check-enter-active,
 .check-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 .check-enter-from,
 .check-leave-to {
