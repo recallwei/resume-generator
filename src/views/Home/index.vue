@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { NButton } from "naive-ui"
 import { useRouter } from "vue-router"
+import { useToggle, useThrottleFn } from "@vueuse/core"
 import { useSiteMetaData } from "@/hooks"
 
 const router = useRouter()
@@ -8,11 +9,18 @@ const siteMetaData = useSiteMetaData()
 
 const navTo = (url: string) => router.push(url)
 
+const [isSwitch, switchToggle] = useToggle(false)
+
+const switchWithThrottle = useThrottleFn(() => switchToggle(), 2000)
+
 const isDEV = import.meta.env.DEV
 </script>
 
 <template>
-  <main class="home-page-container">
+  <main
+    class="home-page-container"
+    :class="isSwitch && 'switch-bg'"
+  >
     <div class="content-wrapper">
       <div class="app-name">
         {{ siteMetaData.appName }}
@@ -29,9 +37,17 @@ const isDEV = import.meta.env.DEV
         </n-button>
         <n-button
           v-if="isDEV"
+          type="info"
           @click="navTo('/components')"
         >
           Components Test
+        </n-button>
+        <n-button
+          v-if="isDEV"
+          type="info"
+          @click="switchWithThrottle"
+        >
+          Switch Wallpaper
         </n-button>
       </div>
     </div>
@@ -52,6 +68,14 @@ const isDEV = import.meta.env.DEV
   justify-content: center;
   align-items: center;
   gap: 20px;
+  background-image: url("/images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 2s ease;
+}
+.switch-bg {
+  background-image: url("/images/home-bg.jpg");
+  transition: background-image 2s ease;
 }
 .content-wrapper {
   display: flex;
