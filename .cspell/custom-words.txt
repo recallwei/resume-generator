@@ -1,3 +1,4 @@
+esbuild
 Pinia
 vueuse
 splitpanes

@@ -14,6 +14,9 @@ export default defineConfig({
     },
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"]
   },
+  esbuild: {
+    drop: ["console", "debugger"]
+  },
   server: {
     host: true,
     port: 4057, // 应用端口号
