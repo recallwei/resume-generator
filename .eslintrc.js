@@ -21,8 +21,13 @@ module.exports = {
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "import/newline-after-import": "off",
-    "import/no-absolute-path": "off", // import ./public
+    // for import ./public
+    "import/no-absolute-path": "off",
     "import/no-unresolved": "off",
-    "no-unused-vars": "off" // use @typescript-eslint/no-unused-vars to check. (warnng level)
+    // use @typescript-eslint/no-unused-vars to check.
+    "no-unused-vars": "off",
+    // use @typescript-eslint/no-shadow to check.
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error"
   }
 }
