@@ -1,4 +1,8 @@
 {
-  "MD041": false,
-  "MD034": false
+  "line-length": {
+    "line_length": 120,
+    "code_block_line_length": 120
+  },
+  "no-bare-urls": false,
+  "first-line-heading": false
 }
