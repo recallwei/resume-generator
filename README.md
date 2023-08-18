@@ -1,6 +1,10 @@
-# App
+# Resume Generator
 
-## Stack
+## Features
+
+...
+
+## Tech Stack
 
 - Vue 3
 - TypeScript
